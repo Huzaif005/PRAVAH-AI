@@ -280,32 +280,24 @@ export const DemandForecastScreen: React.FC<DemandForecastScreenProps> = ({
         </div>
       </div>
 
-      {/* Zoho Catalyst QuickML Pipeline Status Strip */}
+      {/* Secure Telemetry & Operational Engine Status */}
       <div className="bg-[#FCFAF6] border border-[#DDD5C9] rounded-[8px] p-3.5 flex flex-wrap items-center justify-between gap-3 text-xs shadow-xs">
         <div className="flex items-center gap-2.5">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[11px] font-bold text-[#29251F] uppercase tracking-wider">
-              Zoho QuickML Pipeline #8481000000002046
+              Microgrid Demand Forecasting Engine
             </span>
             <span className="text-[#DDD5C9]">·</span>
             <span className="font-mono text-[11px] text-[#716A61]">
-              Project: 99558000000013050 · Org: 60093684405 · Development
+              24-Hour Horizon · Dynamic BESS Dispatch · High-Confidence Inference
             </span>
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-mono text-[10px] font-semibold">
-            ● Pipeline Configured
+          <span className="px-2.5 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 font-mono text-[10px] font-semibold">
+            ● Model Online
           </span>
-          <a
-            href="https://console.catalyst.zoho.in/baas/60093684405/project/99558000000013050/Development#/quickml/pipelines/details/8481000000002046"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#754536] hover:underline font-mono text-[11px] font-semibold"
-          >
-            Console Pipeline Details ↗
-          </a>
         </div>
       </div>
 

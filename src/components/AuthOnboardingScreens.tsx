@@ -12,7 +12,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ mode, onNavigate, onSign
   const [fullName, setFullName] = useState('Elena Vance');
   const [organization, setOrganization] = useState('North Campus Energy District');
   const [email, setEmail] = useState('e.vance@northcampus-grid.org');
-  const [password, setPassword] = useState('Pravaah#2026');
+  const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
   const [emailError, setEmailError] = useState<string | null>(null);
