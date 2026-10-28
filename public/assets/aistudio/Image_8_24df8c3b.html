@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#1c1f2a", "on-tertiary-fixed-variant": "#5516be", "surface-container-low": "#171b26", "inverse-surface": "#dfe2f1", "on-primary-container": "#00424f", "tertiary": "#d0bcff", "on-surface": "#dfe2f1", "surface-tint": "#4cd7f6", "on-tertiary-container": "#4900ae", "error-container": "#93000a", "on-secondary-fixed-variant": "#005236", "surface-container-highest": "#313540", "error": "#ffb4ab", "tertiary-fixed-dim": "#d0bcff", "inverse-primary": "#00687a", "primary-container": "#06b6d4", "surface": "#0f131d", "outline": "#869397", "surface-dim": "#0f131d", "on-error": "#690005", "on-background": "#dfe2f1", "inverse-on-surface": "#2c303b", "surface-container-high": "#262a35", "on-tertiary": "#3c0091", "on-error-container": "#ffdad6", "on-primary-fixed": "#001f26", "on-secondary-fixed": "#002113", "secondary": "#4edea3", "secondary-fixed-dim": "#4edea3", "on-surface-variant": "#bcc9cd", "on-primary-fixed-variant": "#004e5c", "on-secondary": "#003824", "surface-container-lowest": "#0a0e18", "primary": "#4cd7f6", "on-tertiary-fixed": "#23005c", "secondary-container": "#00a572", "outline-variant": "#3d494c", "surface-variant": "#313540", "surface-bright": "#353944", "primary-fixed": "#acedff", "on-primary": "#003640", "primary-fixed-dim": "#4cd7f6", "tertiary-fixed": "#e9ddff", "background": "#0f131d", "on-secondary-container": "#00311f", "secondary-fixed": "#6ffbbe", "tertiary-container": "#b395ff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-lg": "2rem", "space-lg": "1.25rem", "space-sm": "0.5rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-md": "0.75rem", "margin-md": "1.5rem", "gutter": "1rem", "gutter-lg": "1.5rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "display-lg-mobile": ["Inter"], "label-sm": ["Inter"], "display-lg": ["Inter"], "headline-xl": ["Inter"], "headline-md": ["Inter"], "headline-xl-mobile": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "mono-metric": ["Inter"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "mono-metric": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/50"><div class="flex items-center gap-space-sm"><img alt="GridMind AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3B_jEAEHvRvGwGhULigMcB1K05sQnl9slnA6Y3zbia1KxQOC9WP7TbY1zINB0weW65pxPCI-4dpob4cJD-p2a0Apho6CR62o69bhwIWDin0imKmK7b1BlQFZcARWC2GHjf6dzZDraGJWtp8eCiHcWfHthp2rZCYnAIeBWnKzJd2mULfRkBi6HF61DPQjvgq_mzr8fGBTA5cDNicgl9ptjoHFbWz1aig9iTqxY6jY33Dj2B-ivUUFoqg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">GridMind</span><span class="font-label-sm text-label-sm text-primary leading-none mt-0.5">INTELLIGENCE</span></div></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-highest text-on-surface-variant font-medium">v3.0</span></div><nav class="flex flex-col gap-1 p-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg leading-none">grid_view</span><span>Overview</span></div><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="demand-forecast" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg leading-none">stacked_line_chart</span><span>Demand Forecast</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="microgrid-simulator" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg leading-none">hub</span><span>Simulator</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-DEFAULT bg-tertiary-container/30 text-tertiary font-semibold tracking-wider flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>PRO</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="decision-lab" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg leading-none">neurology</span><span>Decision Lab</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="alerts-and-events" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg leading-none">warning</span><span>Alerts & Events</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-error-container text-on-error font-semibold">3</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-headline-sm" data-path="reports" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg leading-none">analytics</span><span>Reports</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg leading-none">tune</span><span>Settings</span></div></a></nav></div><div class="p-space-sm"><div class="p-space-md rounded-xl bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Grid Reliability</span><div class="flex items-center gap-1.5"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-sm text-label-sm text-secondary">ONLINE</span></div></div><div class="flex items-baseline justify-between"><span class="font-mono-metric text-mono-metric text-on-surface">99.4%</span><span class="font-body-sm text-body-sm text-secondary flex items-center"><span class="material-symbols-outlined text-sm leading-none">arrow_drop_up</span>+0.2%</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full mt-space-xs overflow-hidden"><div class="bg-secondary h-full rounded-full" style="width: 99.4%"></div></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-base leading-none text-primary">electric_bolt</span><span class="text-on-surface font-headline-sm text-headline-sm">Main Campus Microgrid #04</span><span class="text-outline-variant">•</span><span>Austin Sector (ERCOT)</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-surface-container-lowest px-space-md py-1.5 rounded-lg"><span class="material-symbols-outlined text-base leading-none text-on-surface-variant mr-2">domain</span><select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer pr-space-sm"><option class="bg-surface-container" value="campus-alpha">Campus Alpha (Active)</option><option class="bg-surface-container" value="west-substation">West Substation</option><option class="bg-surface-container" value="solar-farm-b">Solar Farm B</option></select></div><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-DEFAULT bg-surface-container"><span class="font-label-sm text-label-sm text-on-surface-variant">LATENCY</span><span class="font-label-sm text-label-sm text-secondary font-semibold">12ms</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-DEFAULT bg-tertiary-container/20 text-tertiary font-semibold tracking-wide">DEMO MODE</span></div><div class="flex items-center gap-space-md"><button class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-xl leading-none">refresh</span></button><div class="flex items-center gap-2 px-space-md py-1 rounded-lg bg-surface-container-low"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Islanding</span><div class="relative inline-flex items-center cursor-pointer"><input class="sr-only peer" type="checkbox" value=""/><div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-secondary"></div></div></div><button class="relative p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-xl leading-none">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0Fl3HeUMO0IlJTRBiFasziv8T_eAfDLjLHQF-gotEt7rYILmgJsNpi6DOoRseZkWNHE904TcDccgdHIZ0wVn9yfwvr-9VQk1IlcPWV2FDuGVc2l-fBaIm_VuGwrOFRvjKseEswNHvzrYWi3QT3zjPHQmv1GRLbr4UxN6dLUZ3_wnGOiQbytq8rzhoe8iEeC_na5KhRXccRo1qYB3FDZmjQh_0x1JFubg8nvYH3BZ54Zc-IcJf2UHN"/><div class="hidden xl:flex flex-col text-left"><span class="font-body-sm text-body-sm text-on-surface font-semibold leading-tight">Elena Rostova</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Grid Operations Lead</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="p-space-lg flex flex-col gap-space-lg max-w-[1720px] mx-auto w-full">
+<!-- Header Section -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md pb-space-xs">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm tracking-wider uppercase">
+<span class="material-symbols-outlined text-sm leading-none">verified_user</span>
+<span>Verified Audit Intelligence // Substation 04</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Executive Energy Reports & Audit Documentation</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Automated performance reports, ESG carbon offset audits, controller benchmark summaries, and regulatory compliance logs</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-body-sm text-body-sm font-medium shadow-sm" type="button">
+<span class="material-symbols-outlined text-base leading-none text-on-surface-variant">schedule</span>
+<span>Schedule Automated Report</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-body-sm text-body-sm font-medium shadow-sm" type="button">
+<span class="material-symbols-outlined text-base leading-none text-on-surface-variant">download</span>
+<span>Export All as CSV</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary text-on-primary hover:opacity-90 transition-all font-body-sm text-body-sm font-semibold shadow-md active:scale-95" id="pdf-trigger" type="button">
+<span class="material-symbols-outlined text-base leading-none">picture_as_pdf</span>
+<span>Generate PDF Report</span>
+</button>
+</div>
+</div>
+<!-- Tab Strip -->
+<div class="flex items-center gap-2 p-1 rounded-xl bg-surface-container-lowest overflow-x-auto shadow-inner">
+<button class="report-tab px-space-md py-2 rounded-lg bg-surface-container-high text-primary font-body-sm text-body-sm font-semibold whitespace-nowrap flex items-center gap-2 shadow-sm transition-all" data-tab="dispatch">
+<span class="material-symbols-outlined text-base leading-none">bolt</span>
+<span>Daily Dispatch Summary</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</button>
+<button class="report-tab px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-body-sm text-body-sm font-medium whitespace-nowrap flex items-center gap-2 transition-all" data-tab="financial">
+<span class="material-symbols-outlined text-base leading-none">payments</span>
+<span>Monthly Financial & Peak Shaving Audit</span>
+</button>
+<button class="report-tab px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-body-sm text-body-sm font-medium whitespace-nowrap flex items-center gap-2 transition-all" data-tab="carbon">
+<span class="material-symbols-outlined text-base leading-none">eco</span>
+<span>Carbon & ESG Compliance</span>
+</button>
+<button class="report-tab px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-body-sm text-body-sm font-medium whitespace-nowrap flex items-center gap-2 transition-all" data-tab="battery">
+<span class="material-symbols-outlined text-base leading-none">battery_charging_full</span>
+<span>Battery Storage Health & Degradation</span>
+</button>
+<button class="report-tab px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-body-sm text-body-sm font-medium whitespace-nowrap flex items-center gap-2 transition-all" data-tab="ercot">
+<span class="material-symbols-outlined text-base leading-none">stacked_bar_chart</span>
+<span>ERCOT 4CP Coincident Peak Analysis</span>
+</button>
+</div>
+<!-- Dual Column Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Parameters & Telemetry Snapshots (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Parameter Config Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base leading-none">tune</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Audit Scope & Target</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-DEFAULT bg-secondary-container/20 text-secondary font-semibold">LIVE RECONCILED</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Temporal Horizon</label>
+<div class="flex items-center justify-between px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm leading-none text-primary">calendar_today</span>
+<span>Custom: Last 24 Hours (May 24, 2025)</span>
+</span>
+<span class="font-label-sm text-label-sm text-outline hover:text-on-surface cursor-pointer">EDIT</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Target Asset Node</label>
+<div class="flex items-center justify-between px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm leading-none text-secondary">hub</span>
+<span>Campus Alpha Microgrid #04</span>
+</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface-variant">PRIMARY</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Summary Badges Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Telemetry Ingestion Badges</span>
+<span class="font-label-sm text-label-sm text-outline">24H TELEMETRY</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Badge 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg leading-none">speed</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total Energy Consumed</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">3,842 kWh</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/20 px-2 py-0.5 rounded-DEFAULT font-semibold">-4.2% YoY</span>
+</div>
+<!-- Badge 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-lg leading-none">compress</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Peak Demand Recorded</span>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">158.4 kW</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">(100% under 160 kW cap)</span>
+</div>
+</div>
+</div>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<!-- Badge 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-lg leading-none">solar_power</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Solar Self-Consumption</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">94.8%</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-surface-container-high px-2 py-0.5 rounded-DEFAULT font-semibold">OPTIMAL</span>
+</div>
+<!-- Badge 4 -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-lg leading-none">cloud_off</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Emissions Avoided</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">412 kg CO2e</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">+18.5% Scope 2</span>
+</div>
+<!-- Badge 5 -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-lg leading-none">savings</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Net Cost Savings</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">$342.20</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">vs Legacy Baseline</span>
+</div>
+</div>
+</div>
+<!-- Section Checklist Inclusion -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Report Artifact Pipeline</span>
+<span class="font-label-sm text-label-sm text-primary">4 / 4 SELECTED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select analytical artifacts to compile into the print document canvas.</p>
+<div class="flex flex-col gap-1.5 mt-space-xs">
+<label class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base leading-none">check_box</span>
+<span>24-Hour Load Horizon Chart</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">SVG_VEC</span>
+</label>
+<label class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base leading-none">check_box</span>
+<span>Peak Shaving Event Log</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">DATA_GRID</span>
+</label>
+<label class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base leading-none">check_box</span>
+<span>Controller Mode Timeline</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">STATE_SEQ</span>
+</label>
+<label class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base leading-none">check_box</span>
+<span>Battery Cycle Wear Index</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">TIER1_SOH</span>
+</label>
+</div>
+</div>
+<!-- Telemetry Integrity Signet -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base leading-none">lock</span>
+<span class="font-label-sm text-label-sm text-on-surface">SHA-256 Verified Ledger</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">0x9F4A...B821</span>
+</div>
+</div>
+<!-- Right Column: High-Fidelity Printable Document Preview Canvas (8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<!-- Document Canvas Preview Toolbar -->
+<div class="flex items-center justify-between px-space-md py-space-xs rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Print Viewport Engine [Vector Emulation]
+            </span>
+<span class="font-body-sm text-body-sm text-outline-variant">|</span>
+<span class="font-label-sm text-label-sm text-on-surface">A4 (8.27 x 11.69 in) • 300 DPI READY</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Zoom:</span>
+<button class="px-2 py-0.5 rounded-DEFAULT bg-surface-container text-on-surface font-label-sm text-label-sm">100%</button>
+<button class="px-2 py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">FIT</button>
+</div>
+</div>
+<!-- High-Fidelity Print-Ready Sheet -->
+<!-- Light Slate / White Executive Canvas Mimicking Crisp Print Artifact -->
+<div class="w-full bg-inverse-surface text-inverse-on-surface p-8 sm:p-10 rounded-xl shadow-2xl flex flex-col gap-8 transition-all" id="printable-canvas">
+<!-- Document Header -->
+<div class="flex flex-col gap-4 pb-6 bg-transparent">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-2xl leading-none">grid_view</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm tracking-tight font-bold text-inverse-on-surface">GridMind AI Intelligence Systems</span>
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-outline">Autonomous Dispatcher & Demand Optimization</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-DEFAULT bg-surface-variant text-on-surface font-mono font-semibold">FORM GM-2025-E4</span>
+<span class="font-label-sm text-label-sm text-outline mt-1 font-mono">STATUS: CERTIFIED</span>
+</div>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-xl text-headline-xl text-inverse-on-surface font-bold tracking-tight">Microgrid Operations & Peak Shaving Performance Audit</h2>
+<p class="font-body-sm text-body-sm text-outline font-medium">Facility: Campus Alpha #04 | Date: May 24, 2025 | Generated by: Elena Rostova (Grid Ops)</p>
+</div>
+</div>
+<!-- Section 1: Executive KPI Summary Matrix -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold text-outline">Section 01 // Executive KPI Telemetry Matrix</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">RESOLUTION: 15-MIN INTERVALS</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+<div class="p-3 rounded-lg bg-surface/5 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase">Net Grid Import</span>
+<span class="font-mono-metric text-mono-metric font-bold text-inverse-on-surface">1,210 kWh</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">↓ 32% vs unmanaged</span>
+</div>
+<div class="p-3 rounded-lg bg-surface/5 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase">Peak Demand</span>
+<span class="font-mono-metric text-mono-metric font-bold text-inverse-on-surface">158.4 kW</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Under 160 kW Cap</span>
+</div>
+<div class="p-3 rounded-lg bg-surface/5 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase">Solar Yield Utilized</span>
+<span class="font-mono-metric text-mono-metric font-bold text-inverse-on-surface">2,632 kWh</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">94.8% Direct Use</span>
+</div>
+<div class="p-3 rounded-lg bg-surface/5 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase">24H Net Savings</span>
+<span class="font-mono-metric text-mono-metric font-bold text-inverse-on-surface">$342.20</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Arbitrage + Shaving</span>
+</div>
+<div class="p-3 rounded-lg bg-surface/5 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase">Grid Reliability</span>
+<span class="font-mono-metric text-mono-metric font-bold text-secondary">99.40%</span>
+<span class="font-label-sm text-label-sm text-outline font-medium">Nominal Frequency</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Mini Visual 24-Hour Load Curve -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold text-outline">Section 02 // 24-Hour Demand Horizon & Shaved Peak Overlay</span>
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm text-outline">
+<span class="w-3 h-1 bg-outline rounded-full"></span> Unmitigated Load Baseline
+                </span>
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-semibold">
+<span class="w-3 h-1 bg-primary rounded-full"></span> GridMind Autonomous Profile
+                </span>
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="w-2.5 h-2.5 rounded-DEFAULT bg-secondary/30"></span> Peak Shaved Zone
+                </span>
+</div>
+</div>
+<!-- Inline High Precision SVG Chart -->
+<div class="p-4 rounded-lg bg-surface/5 flex flex-col gap-2">
+<div class="relative w-full h-44">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 760 160">
+<defs>
+<!-- Peak Shaved Gradient Area -->
+<lineargradient id="shavedGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4edea3" stop-opacity="0.55"></stop>
+<stop offset="100%" stop-color="#4edea3" stop-opacity="0.05"></stop>
+</lineargradient>
+<!-- Primary Curve Gradient Fill -->
+<lineargradient id="curveGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Grid Guides -->
+<line stroke="#869397" stroke-dasharray="3 3" stroke-opacity="0.2" x1="0" x2="760" y1="20" y2="20"></line>
+<line stroke="#869397" stroke-dasharray="3 3" stroke-opacity="0.2" x1="0" x2="760" y1="60" y2="60"></line>
+<line stroke="#869397" stroke-dasharray="3 3" stroke-opacity="0.2" x1="0" x2="760" y1="100" y2="100"></line>
+<line stroke="#869397" stroke-dasharray="3 3" stroke-opacity="0.2" x1="0" x2="760" y1="140" y2="140"></line>
+<!-- Peak Cap Line (160 kW) -->
+<line stroke="#ffb4ab" stroke-dasharray="4 2" stroke-width="1.5" x1="0" x2="760" y1="52" y2="52"></line>
+<text fill="#690005" font-size="9" font-weight="600" letter-spacing="0.05em" x="8" y="47">CRITICAL TARIFF PEAK CAP (160 kW)</text>
+<!-- Shaved Peak Zone Difference (Polygon between unmitigated peak and actual) -->
+<!-- Between 14:00 (x: 440) and 19:00 (x: 600) -->
+<polygon fill="url(#shavedGrad)" points="430,78 460,54 500,26 530,22 560,34 590,62 610,88 610,75 580,56 550,54 520,53 480,55 430,78"></polygon>
+<!-- Baseline Unmitigated Curve (Dotted Grey) -->
+<path d="M 0,110 C 100,105 180,120 260,95 C 340,70 390,75 430,78 C 470,40 500,22 530,22 C 560,30 580,50 610,75 C 660,105 710,112 760,118" fill="none" opacity="0.6" stroke="#869397" stroke-dasharray="4 3" stroke-width="1.8"></path>
+<!-- Actual Dispatch Curve Fill -->
+<path d="M 0,110 C 100,105 180,120 260,95 C 340,70 390,75 430,78 C 470,62 500,54 530,54 C 560,54 580,58 610,75 C 660,105 710,112 760,118 L 760,150 L 0,150 Z" fill="url(#curveGrad)"></path>
+<!-- Actual Dispatch Curve Line -->
+<path d="M 0,110 C 100,105 180,120 260,95 C 340,70 390,75 430,78 C 470,62 500,54 530,54 C 560,54 580,58 610,75 C 660,105 710,112 760,118" fill="none" stroke="#00687a" stroke-width="2.5"></path>
+<!-- Battery Discharge Event Callout -->
+<circle cx="530" cy="54" fill="#4edea3" r="4.5" stroke="#0f131d" stroke-width="1.5"></circle>
+<rect fill="#0f131d" height="20" opacity="0.85" rx="3" width="110" x="475" y="65"></rect>
+<text fill="#4edea3" font-size="8.5" font-weight="600" x="482" y="78">BESS Dispatched: 58 kW</text>
+</svg>
+</div>
+<!-- Time axis markers -->
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm px-1 font-mono">
+<span>00:00</span>
+<span>04:00</span>
+<span>08:00</span>
+<span>12:00</span>
+<span class="text-secondary font-bold">16:00 (Peak Shave)</span>
+<span>20:00</span>
+<span>23:59</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Controller Performance Breakdown -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold text-outline">Section 03 // Controller Performance Benchmark Analysis</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">DELTA: -30.4% TOTAL COST</span>
+</div>
+<div class="overflow-hidden rounded-lg bg-surface/5">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface/10 text-outline uppercase font-label-sm text-label-sm">
+<th class="py-2.5 px-3 font-semibold">Metric Dimension</th>
+<th class="py-2.5 px-3 font-semibold">Legacy Rule-Based</th>
+<th class="py-2.5 px-3 font-semibold text-primary font-bold">GridMind Autonomous</th>
+<th class="py-2.5 px-3 font-semibold">Variance / Delta</th>
+<th class="py-2.5 px-3 font-semibold text-right">Operational Status</th>
+</tr>
+</thead>
+<tbody class="text-inverse-on-surface">
+<tr class="hover:bg-surface/5">
+<td class="py-2.5 px-3 font-medium">BESS Energy Arbitrage</td>
+<td class="py-2.5 px-3 text-outline">$84.50</td>
+<td class="py-2.5 px-3 font-bold text-primary">$196.20</td>
+<td class="py-2.5 px-3 text-secondary font-semibold">+$111.70 (+132%)</td>
+<td class="py-2.5 px-3 text-right">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-semibold">OPTIMIZED</span>
+</td>
+</tr>
+<tr class="hover:bg-surface/5">
+<td class="py-2.5 px-3 font-medium">Demand Charge Exposure</td>
+<td class="py-2.5 px-3 text-outline">$1,024.00 (212 kW)</td>
+<td class="py-2.5 px-3 font-bold text-primary">$764.00 (158.4 kW)</td>
+<td class="py-2.5 px-3 text-secondary font-semibold">-$260.00 (-25.4%)</td>
+<td class="py-2.5 px-3 text-right">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-semibold">SHAVED</span>
+</td>
+</tr>
+<tr class="hover:bg-surface/5">
+<td class="py-2.5 px-3 font-medium">Threshold Breach Incidents</td>
+<td class="py-2.5 px-3 text-error">3 Incursions</td>
+<td class="py-2.5 px-3 font-bold text-secondary">0 Violations</td>
+<td class="py-2.5 px-3 text-secondary font-semibold">100% Elimination</td>
+<td class="py-2.5 px-3 text-right">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-semibold">COMPLIANT</span>
+</td>
+</tr>
+<tr class="hover:bg-surface/5">
+<td class="py-2.5 px-3 font-medium">Solar Curtailment Losses</td>
+<td class="py-2.5 px-3 text-outline">184 kWh</td>
+<td class="py-2.5 px-3 font-bold text-primary">12 kWh</td>
+<td class="py-2.5 px-3 text-secondary font-semibold">-172 kWh (-93.5%)</td>
+<td class="py-2.5 px-3 text-right">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-semibold">CAPTURED</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Section 4: Battery Storage Stewardship & Warranty Health -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold text-outline">Section 04 // Battery Storage Stewardship & Asset Warranty Integrity</span>
+<span class="font-label-sm text-label-sm text-outline">PACK SERIAL: BESS-CATL-LFP-9481</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<div class="p-3 rounded-lg bg-surface/5 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline">Equivalent Full Cycles (24H)</span>
+<div class="flex items-baseline gap-2">
+<span class="font-mono-metric text-mono-metric font-bold text-inverse-on-surface">0.48 EFC</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">(Budget: 1.00 EFC)</span>
+</div>
+<div class="w-full bg-surface/10 h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 48%"></div>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface/5 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline">State of Health (SoH) Estimate</span>
+<div class="flex items-baseline gap-2">
+<span class="font-mono-metric text-mono-metric font-bold text-inverse-on-surface">98.2%</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Tier-1 Optimal</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Projected lifetime: 14.8 yrs</span>
+</div>
+<div class="p-3 rounded-lg bg-surface/5 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline">Thermal Delta During Peak</span>
+<div class="flex items-baseline gap-2">
+<span class="font-mono-metric text-mono-metric font-bold text-inverse-on-surface">2.4° C</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Normal Zone (<5°C)</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Liquid coolant flow: 14.2 L/min</span>
+</div>
+</div>
+</div>
+<!-- Section 5: Regulatory Compliance Sign-off & Audit Seal -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold text-outline">Section 05 // Regulatory Compliance Attestation</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">ALL CRITERIA SATISFIED</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<!-- Regulatory Item 1 -->
+<div class="p-3.5 rounded-lg bg-surface/5 flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-sm leading-none">task_alt</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-headline-sm text-headline-sm text-inverse-on-surface">IEEE 1547.4 Islanding Standard</span>
+<p class="font-body-sm text-body-sm text-outline">Autonomous intentional islanding and anti-islanding relays validated. Frequency response within +/-0.02 Hz tolerances.</p>
+<span class="font-label-sm text-label-sm text-secondary font-semibold mt-1">STATUS: FULLY COMPLIANT</span>
+</div>
+</div>
+<!-- Regulatory Item 2 -->
+<div class="p-3.5 rounded-lg bg-surface/5 flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-sm leading-none">task_alt</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-headline-sm text-headline-sm text-inverse-on-surface">ERCOT 4CP Peak Exemption Protocol</span>
+<p class="font-body-sm text-body-sm text-outline">Summer coincident peak avoidance dispatched successfully during high heat advisory window (16:30 - 18:00 CST).</p>
+<span class="font-label-sm text-label-sm text-secondary font-semibold mt-1">STATUS: QUALIFIED EXEMPTION</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Document Footer: Cryptographic Signature & Seal -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 bg-transparent">
+<div class="flex items-center gap-3">
+<!-- Digital Seal Graphic -->
+<div class="w-12 h-12 rounded-full bg-surface flex items-center justify-center text-primary shadow-sm shrink-0">
+<span class="material-symbols-outlined text-2xl leading-none">security</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm font-bold text-inverse-on-surface">DIGITALLY VERIFIED OPERATIONAL AUDIT</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-DEFAULT bg-secondary-container/30 text-secondary font-bold">SHA-256</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono mt-0.5">Hash: GM-AUD-8891-OPT-774A • Timestamp: 2025-05-24T23:59:59.042Z</span>
+<span class="font-label-sm text-label-sm text-outline">Authorizing Officer: Elena Rostova, Lead Operations Specialist</span>
+</div>
+</div>
+<!-- Visual Barcode / QR Simulation -->
+<div class="flex flex-col items-end gap-1">
+<div class="h-7 w-32 bg-surface/20 flex items-center justify-between px-1">
+<span class="w-1 h-5 bg-outline"></span>
+<span class="w-0.5 h-5 bg-outline"></span>
+<span class="w-1.5 h-5 bg-outline"></span>
+<span class="w-0.5 h-5 bg-outline"></span>
+<span class="w-2 h-5 bg-outline"></span>
+<span class="w-0.5 h-5 bg-outline"></span>
+<span class="w-1 h-5 bg-outline"></span>
+<span class="w-2 h-5 bg-outline"></span>
+<span class="w-0.5 h-5 bg-outline"></span>
+<span class="w-1.5 h-5 bg-outline"></span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">CONFIDENTIAL // ERCOT SEC</span>
+</div>
+</div>
+</div>
+<!-- Document Control Footnote -->
+<div class="flex items-center justify-between px-space-md py-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>Viewing cached printable preview rendered at 00:04 UTC</span>
+<button class="text-primary hover:underline font-medium" id="toggle-print-view">Launch High-Res Print Spooler</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+    // Tab switching micro-interaction
+    const tabs = document.querySelectorAll('.report-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('bg-surface-container-high', 'text-primary', 'font-semibold', 'shadow-sm');
+          t.classList.add('text-on-surface-variant', 'font-medium');
+          const dot = t.querySelector('.w-1\\.5');
+          if (dot) dot.remove();
+        });
+        tab.classList.add('bg-surface-container-high', 'text-primary', 'font-semibold', 'shadow-sm');
+        tab.classList.remove('text-on-surface-variant', 'font-medium');
+        
+        const newDot = document.createElement('span');
+        newDot.className = 'w-1.5 h-1.5 rounded-full bg-primary';
+        tab.appendChild(newDot);
+      });
+    });
+
+    // PDF generation feedback micro-interaction
+    const pdfBtn = document.getElementById('pdf-trigger');
+    if (pdfBtn) {
+      pdfBtn.addEventListener('click', () => {
+        const originalText = pdfBtn.innerHTML;
+        pdfBtn.innerHTML = '<span class="material-symbols-outlined text-base leading-none animate-spin">progress_activity</span><span>Compiling PDF...</span>';
+        pdfBtn.classList.add('opacity-75');
+        setTimeout(() => {
+          pdfBtn.innerHTML = '<span class="material-symbols-outlined text-base leading-none text-on-primary">check</span><span>PDF Ready for Download</span>';
+          pdfBtn.classList.remove('opacity-75');
+          setTimeout(() => {
+            pdfBtn.innerHTML = originalText;
+          }, 2400);
+        }, 1200);
+      });
+    }
+
+    // Toggle print spooler mock
+    const spoolerBtn = document.getElementById('toggle-print-view');
+    if (spoolerBtn) {
+      spoolerBtn.addEventListener('click', () => {
+        window.print();
+      });
+    }
+  </script>
+</div></main></div></body></html>

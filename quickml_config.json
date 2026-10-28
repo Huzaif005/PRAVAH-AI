@@ -1,0 +1,13 @@
+{
+  "provider": "zoho_catalyst_quickml",
+  "org_id": "60093684405",
+  "project_id": "99558000000013050",
+  "environment": "Development",
+  "pipeline_id": "8481000000002046",
+  "console_url": "https://console.catalyst.zoho.in/baas/60093684405/project/99558000000013050/Development#/quickml/pipelines/details/8481000000002046",
+  "endpoint_url": "https://api.catalyst.zoho.in/baas/v1/project/99558000000013050/quickml/pipelines/8481000000002046/predict",
+  "endpoint_key": "",
+  "auth_token": "",
+  "timeout_seconds": 10,
+  "fallback_model": "demand_forecast_model.joblib"
+}

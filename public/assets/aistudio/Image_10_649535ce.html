@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#1c1f2a", "on-tertiary-fixed-variant": "#5516be", "surface-container-low": "#171b26", "inverse-surface": "#dfe2f1", "on-primary-container": "#00424f", "tertiary": "#d0bcff", "on-surface": "#dfe2f1", "surface-tint": "#4cd7f6", "on-tertiary-container": "#4900ae", "error-container": "#93000a", "on-secondary-fixed-variant": "#005236", "surface-container-highest": "#313540", "error": "#ffb4ab", "tertiary-fixed-dim": "#d0bcff", "inverse-primary": "#00687a", "primary-container": "#06b6d4", "surface": "#0f131d", "outline": "#869397", "surface-dim": "#0f131d", "on-error": "#690005", "on-background": "#dfe2f1", "inverse-on-surface": "#2c303b", "surface-container-high": "#262a35", "on-tertiary": "#3c0091", "on-error-container": "#ffdad6", "on-primary-fixed": "#001f26", "on-secondary-fixed": "#002113", "secondary": "#4edea3", "secondary-fixed-dim": "#4edea3", "on-surface-variant": "#bcc9cd", "on-primary-fixed-variant": "#004e5c", "on-secondary": "#003824", "surface-container-lowest": "#0a0e18", "primary": "#4cd7f6", "on-tertiary-fixed": "#23005c", "secondary-container": "#00a572", "outline-variant": "#3d494c", "surface-variant": "#313540", "surface-bright": "#353944", "primary-fixed": "#acedff", "on-primary": "#003640", "primary-fixed-dim": "#4cd7f6", "tertiary-fixed": "#e9ddff", "background": "#0f131d", "on-secondary-container": "#00311f", "secondary-fixed": "#6ffbbe", "tertiary-container": "#b395ff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-lg": "2rem", "space-lg": "1.25rem", "space-sm": "0.5rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-md": "0.75rem", "margin-md": "1.5rem", "gutter": "1rem", "gutter-lg": "1.5rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "display-lg-mobile": ["Inter"], "label-sm": ["Inter"], "display-lg": ["Inter"], "headline-xl": ["Inter"], "headline-md": ["Inter"], "headline-xl-mobile": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "mono-metric": ["Inter"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "mono-metric": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/50"><div class="flex items-center gap-space-sm"><img alt="GridMind AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3B_jEAEHvRvGwGhULigMcB1K05sQnl9slnA6Y3zbia1KxQOC9WP7TbY1zINB0weW65pxPCI-4dpob4cJD-p2a0Apho6CR62o69bhwIWDin0imKmK7b1BlQFZcARWC2GHjf6dzZDraGJWtp8eCiHcWfHthp2rZCYnAIeBWnKzJd2mULfRkBi6HF61DPQjvgq_mzr8fGBTA5cDNicgl9ptjoHFbWz1aig9iTqxY6jY33Dj2B-ivUUFoqg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">GridMind</span><span class="font-label-sm text-label-sm text-primary leading-none mt-0.5">INTELLIGENCE</span></div></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-highest text-on-surface-variant font-medium">v3.0</span></div><nav class="flex flex-col gap-1 p-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg leading-none">grid_view</span><span>Overview</span></div><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="demand-forecast" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg leading-none">stacked_line_chart</span><span>Demand Forecast</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="microgrid-simulator" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg leading-none">hub</span><span>Simulator</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-DEFAULT bg-tertiary-container/30 text-tertiary font-semibold tracking-wider flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>PRO</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="decision-lab" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg leading-none">neurology</span><span>Decision Lab</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="alerts-and-events" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg leading-none">warning</span><span>Alerts & Events</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-error-container text-on-error font-semibold">3</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="reports" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg leading-none">analytics</span><span>Reports</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-headline-sm" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg leading-none">tune</span><span>Settings</span></div></a></nav></div><div class="p-space-sm"><div class="p-space-md rounded-xl bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Grid Reliability</span><div class="flex items-center gap-1.5"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-sm text-label-sm text-secondary">ONLINE</span></div></div><div class="flex items-baseline justify-between"><span class="font-mono-metric text-mono-metric text-on-surface">99.4%</span><span class="font-body-sm text-body-sm text-secondary flex items-center"><span class="material-symbols-outlined text-sm leading-none">arrow_drop_up</span>+0.2%</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full mt-space-xs overflow-hidden"><div class="bg-secondary h-full rounded-full" style="width: 99.4%"></div></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-base leading-none text-primary">electric_bolt</span><span class="text-on-surface font-headline-sm text-headline-sm">Main Campus Microgrid #04</span><span class="text-outline-variant">•</span><span>Austin Sector (ERCOT)</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-surface-container-lowest px-space-md py-1.5 rounded-lg"><span class="material-symbols-outlined text-base leading-none text-on-surface-variant mr-2">domain</span><select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer pr-space-sm"><option class="bg-surface-container" value="campus-alpha">Campus Alpha (Active)</option><option class="bg-surface-container" value="west-substation">West Substation</option><option class="bg-surface-container" value="solar-farm-b">Solar Farm B</option></select></div><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-DEFAULT bg-surface-container"><span class="font-label-sm text-label-sm text-on-surface-variant">LATENCY</span><span class="font-label-sm text-label-sm text-secondary font-semibold">12ms</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-DEFAULT bg-tertiary-container/20 text-tertiary font-semibold tracking-wide">DEMO MODE</span></div><div class="flex items-center gap-space-md"><button class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-xl leading-none">refresh</span></button><div class="flex items-center gap-2 px-space-md py-1 rounded-lg bg-surface-container-low"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Islanding</span><div class="relative inline-flex items-center cursor-pointer"><input class="sr-only peer" type="checkbox" value=""/><div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-secondary"></div></div></div><button class="relative p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-xl leading-none">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0Fl3HeUMO0IlJTRBiFasziv8T_eAfDLjLHQF-gotEt7rYILmgJsNpi6DOoRseZkWNHE904TcDccgdHIZ0wVn9yfwvr-9VQk1IlcPWV2FDuGVc2l-fBaIm_VuGwrOFRvjKseEswNHvzrYWi3QT3zjPHQmv1GRLbr4UxN6dLUZ3_wnGOiQbytq8rzhoe8iEeC_na5KhRXccRo1qYB3FDZmjQh_0x1JFubg8nvYH3BZ54Zc-IcJf2UHN"/><div class="hidden xl:flex flex-col text-left"><span class="font-body-sm text-body-sm text-on-surface font-semibold leading-tight">Elena Rostova</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Grid Operations Lead</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="p-space-lg space-y-space-lg">
+<!-- Top Action Banner / Status Strip -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-xs">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-primary font-semibold">GRID CONFIGURATION PROTOCOL</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">IEEE 1547-2018 COMPLIANT</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">System Configuration & Dispatch Parameters</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Manage telemetry polling rates, controller thresholds, machine learning models, simulation parameters, and user roles</p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-center shrink-0">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors font-headline-sm text-headline-sm flex items-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg leading-none text-outline">history</span>
+<span>Reset to Factory Defaults</span>
+</button>
+<button class="px-space-lg py-2 rounded-lg bg-primary hover:bg-surface-tint text-on-primary-fixed transition-all font-headline-sm text-headline-sm flex items-center gap-2 shadow-[0_0_16px_rgba(76,215,246,0.35)] active:scale-95" id="save-btn" type="button">
+<span class="material-symbols-outlined text-lg leading-none font-bold">check</span>
+<span>Save All Changes</span>
+</button>
+</div>
+</div>
+<!-- Navigation Tabs -->
+<div class="w-full bg-surface-container-lowest p-1 rounded-xl shadow-inner flex items-center gap-1 overflow-x-auto">
+<button class="px-space-md py-2 rounded-lg font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all whitespace-nowrap">
+        General Preferences
+      </button>
+<button class="px-space-md py-2 rounded-lg font-headline-sm text-headline-sm bg-surface-container text-primary shadow-sm flex items-center gap-2 whitespace-nowrap">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Controller Thresholds</span>
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-1.5 py-0.5 rounded-DEFAULT uppercase">Active</span>
+</button>
+<button class="px-space-md py-2 rounded-lg font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all whitespace-nowrap">
+        Simulation Engine
+      </button>
+<button class="px-space-md py-2 rounded-lg font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all whitespace-nowrap">
+        ML Inference & Models
+      </button>
+<button class="px-space-md py-2 rounded-lg font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all whitespace-nowrap">
+        Integrations & API
+      </button>
+<button class="px-space-md py-2 rounded-lg font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all whitespace-nowrap">
+        Team & Permissions
+      </button>
+</div>
+<!-- Main Settings Form Layout (Bento Grid) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Card 1: Peak Demand & Threshold Management (Span 7 cols) -->
+<section class="lg:col-span-7 bg-surface-container rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<!-- Header -->
+<div class="flex items-start justify-between pb-space-md mb-space-md bg-surface-container-low/40 p-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 rounded-lg bg-primary-container/20 text-primary">
+<span class="material-symbols-outlined text-2xl leading-none">speed</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Peak Demand & Threshold Management</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Core Energy Dispatch Limits (Active Bus 04)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-DEFAULT bg-secondary-container/20 text-secondary font-medium tracking-wide">
+              AUTO-GOVERNED
+            </span>
+</div>
+<!-- Fields Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mb-space-md">
+<!-- Soft Warning Threshold -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between mb-1">
+<label class="font-label-md text-label-md text-on-surface">Soft Warning Threshold</label>
+<span class="material-symbols-outlined text-base text-primary">info</span>
+</div>
+<div class="relative flex items-center mt-1">
+<input class="w-full bg-surface-container px-space-md py-2 rounded-DEFAULT font-mono-metric text-mono-metric text-on-surface focus:outline-none focus:ring-1 focus:ring-primary pr-12 transition-all" type="text" value="160 kW"/>
+<span class="absolute right-3 font-label-sm text-label-sm text-on-surface-variant uppercase">kW NET</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Triggers pre-cooling HVAC routine and shifts battery into active discharge standby.
+              </p>
+</div>
+<!-- Hard Critical Threshold -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between mb-1">
+<label class="font-label-md text-label-md text-error">Hard Critical Threshold</label>
+<span class="material-symbols-outlined text-base text-error">warning</span>
+</div>
+<div class="relative flex items-center mt-1">
+<input class="w-full bg-surface-container px-space-md py-2 rounded-DEFAULT font-mono-metric text-mono-metric text-error focus:outline-none focus:ring-1 focus:ring-error pr-12 transition-all" type="text" value="200 kW"/>
+<span class="absolute right-3 font-label-sm text-label-sm text-error uppercase">PEAK CAP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Initiates emergency autonomous load-shedding and non-critical circuit isolation.
+              </p>
+</div>
+</div>
+<!-- Evening Peak Tariff Window -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest mb-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-space-sm">
+<div>
+<span class="font-label-md text-label-md text-on-surface block font-medium">Evening Peak Tariff Window (Time-of-Use)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Austin Energy Commercial Tier 3 ($0.38 / kWh Peak Rate)</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-container/20 px-2 py-0.5 rounded-DEFAULT">AUTOMATED COINCIDENT SHAVING</span>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div class="flex items-center bg-surface-container px-space-md py-2 rounded-DEFAULT">
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-3">START</span>
+<input class="bg-transparent font-headline-sm text-headline-sm text-on-surface focus:outline-none w-full" type="time" value="18:00"/>
+</div>
+<div class="flex items-center bg-surface-container px-space-md py-2 rounded-DEFAULT">
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-3">END</span>
+<input class="bg-transparent font-headline-sm text-headline-sm text-on-surface focus:outline-none w-full" type="time" value="22:00"/>
+</div>
+</div>
+</div>
+<!-- Dynamic Reserve Buffer Slider -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest mb-space-md">
+<div class="flex items-center justify-between mb-2">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-medium">Dynamic Reserve Buffer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Minimum 37.5 kWh BESS capacity locked for frequency contingencies</span>
+</div>
+<span class="font-mono-metric text-mono-metric text-primary" id="buffer-val">15%</span>
+</div>
+<div class="relative w-full py-2">
+<input class="w-full accent-primary bg-surface-container-highest rounded-full h-1.5 cursor-pointer" id="reserve-slider" max="40" min="5" type="range" value="15"/>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mt-1">
+<span>5% (Aggressive)</span>
+<span>15% (Nominal Baseline)</span>
+<span>40% (Storm Reserve)</span>
+</div>
+</div>
+</div>
+<!-- Coincident Peak Protection Toggle -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm pr-space-md">
+<div class="p-2 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined text-xl leading-none">bolt</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Coincident Peak Protection (ERCOT 4CP Dispatch)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automatically raises discharge urgency on high ERCOT grid heat alert days to minimize transmission surcharges</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+</div>
+<!-- Inline Visual Micro-chart: kW threshold simulation preview -->
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest p-space-md rounded-lg">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-2">
+<span class="uppercase">Threshold Simulation Preview (24h Envelope)</span>
+<span class="text-secondary">Expected Peak: 174 kW @ 19:40</span>
+</div>
+<svg class="w-full h-14 text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 600 60">
+<line opacity="0.8" stroke="#ffb4ab" stroke-dasharray="4 4" stroke-width="1.5" x1="0" x2="600" y1="12" y2="12"></line>
+<line opacity="0.8" stroke="#4cd7f6" stroke-dasharray="4 4" stroke-width="1.5" x1="0" x2="600" y1="28" y2="28"></line>
+<path d="M0 55 Q 80 50, 150 45 T 300 38 T 420 20 T 490 24 T 540 45 T 600 52 L 600 60 L 0 60 Z" fill="currentColor" fill-opacity="0.1"></path>
+<path d="M0 55 Q 80 50, 150 45 T 300 38 T 420 20 T 490 24 T 540 45 T 600 52" stroke="currentColor" stroke-width="2"></path>
+<circle cx="420" cy="20" fill="#4edea3" r="4"></circle>
+</svg>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mt-1">
+<span class="flex items-center gap-1"><span class="w-2 h-0.5 bg-error inline-block"></span> 200kW Hard Cap</span>
+<span class="flex items-center gap-1"><span class="w-2 h-0.5 bg-primary inline-block"></span> 160kW Standby Trigger</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary inline-block"></span> Shaved Peak</span>
+</div>
+</div>
+</section>
+<!-- Card 2: Battery Storage (BESS) Operating Constraints (Span 5 cols) -->
+<section class="lg:col-span-5 bg-surface-container rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<!-- Header -->
+<div class="flex items-start justify-between pb-space-md mb-space-md bg-surface-container-low/40 p-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 rounded-lg bg-secondary-container/20 text-secondary">
+<span class="material-symbols-outlined text-2xl leading-none">battery_charging_full</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Battery Storage (BESS)</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tesla Megapack 2XL - Cell Health Telemetry</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-DEFAULT bg-surface-container-highest text-secondary font-mono">
+              HEALTH: 98.7%
+            </span>
+</div>
+<div class="space-y-space-md">
+<!-- Maximum Depth of Discharge -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between mb-1">
+<label class="font-label-md text-label-md text-on-surface">Maximum Depth of Discharge (DoD)</label>
+<span class="font-mono-metric text-mono-metric text-secondary">85%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden my-2">
+<div class="bg-secondary h-full rounded-full" style="width: 85%"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Enforces a strict 15% lower cutoff floor to preserve lithium iron phosphate (LFP) cell chemistry cycle lifespan.
+              </p>
+</div>
+<!-- Maximum Charge / Discharge Rate -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<div>
+<label class="font-label-md text-label-md text-on-surface block font-medium">Max C-Rate / Power Dispatch</label>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Continuous Bi-directional Inverter Cap</span>
+</div>
+<div class="flex items-center bg-surface-container px-space-md py-1.5 rounded-DEFAULT">
+<input class="w-12 bg-transparent font-mono-metric text-mono-metric text-on-surface text-right focus:outline-none" type="text" value="45.0"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-1">kW</span>
+</div>
+</div>
+<div class="mt-2 text-right">
+<span class="font-label-sm text-label-sm text-outline">Inverter Nameplate Limit: 50.0 kW (Rated Derate 90%)</span>
+</div>
+</div>
+<!-- Thermal Throttle Limit -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">thermostat</span>
+<div>
+<label class="font-label-md text-label-md text-on-surface block font-medium">Thermal Throttle Cutoff</label>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enclosure & Pack Chiller Trigger</span>
+</div>
+</div>
+<div class="bg-surface-container px-space-md py-1.5 rounded-DEFAULT font-mono-metric text-mono-metric text-on-surface">
+                  104 °F <span class="text-on-surface-variant font-body-sm text-body-sm font-normal">/ 40 °C</span>
+</div>
+</div>
+</div>
+<!-- Micro-Cycling Conservation Policy -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest">
+<div class="pr-space-md">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Micro-Cycling Conservation</span>
+<span class="material-symbols-outlined text-sm text-secondary">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Prevents rapid small oscillations (< 2kW pulses) to satisfy warranty endurance targets (10-year guaranteed).
+                </span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary">sync</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">BMS Sync Frequency: 250ms CANbus</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">NOMINAL TEMP: 74.2 °F</span>
+</div>
+</section>
+<!-- Card 3: AI Inference & Predictive Model Configuration (Span 7 cols) -->
+<section class="lg:col-span-7 bg-surface-container rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<!-- Header -->
+<div class="flex items-start justify-between pb-space-md mb-space-md bg-surface-container-low/40 p-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 rounded-lg bg-tertiary-container/30 text-tertiary">
+<span class="material-symbols-outlined text-2xl leading-none">neurology</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">AI Inference & Predictive Models</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Autonomous Microgrid Optimization Kernel</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-DEFAULT bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+<span>INFERENCE ACTIVE</span>
+</div>
+</div>
+<!-- Dropdowns & Selectors -->
+<div class="space-y-space-md">
+<!-- Active Neural Model -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest">
+<label class="font-label-md text-label-md text-on-surface block mb-1.5 font-medium">Active Neural Forecast Model</label>
+<div class="relative">
+<select class="w-full bg-surface-container text-on-surface font-body-md text-body-md px-space-md py-2.5 rounded-DEFAULT appearance-none focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer pr-10">
+<option selected="">Ensemble LSTM-Transformer v3.2 (Production)</option>
+<option>Temporal Convolutional Network (TCN) v2.8 - High Volatility</option>
+<option>Gradient Boosted Dual-Horizon Forecaster (Fallback)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+<div class="flex items-center gap-space-md mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-secondary">check_circle</span> Loss: 0.018 RMSE</span>
+<span>•</span>
+<span>Latency: 4.8ms</span>
+<span>•</span>
+<span>Trained: 36h ago</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Prediction Frequency -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest">
+<label class="font-label-md text-label-md text-on-surface block mb-1.5 font-medium">Re-evaluation Cadence</label>
+<div class="relative">
+<select class="w-full bg-surface-container text-on-surface font-body-sm text-body-sm px-space-md py-2 rounded-DEFAULT appearance-none focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer pr-8">
+<option selected="">Every 5 Minutes (Real-Time Live Metering)</option>
+<option>Every 15 Minutes (Standard Settlement)</option>
+<option>Hourly Horizon Refresh</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-on-surface-variant pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+<!-- Weather Telemetry Feed -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest">
+<label class="font-label-md text-label-md text-on-surface block mb-1.5 font-medium">Weather Telemetry Feed</label>
+<div class="relative">
+<select class="w-full bg-surface-container text-on-surface font-body-sm text-body-sm px-space-md py-2 rounded-DEFAULT appearance-none focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer pr-8">
+<option selected="">NOAA HRRR + Ultrasonic On-site Station</option>
+<option>ECMWF High-Resolution 1km Blend</option>
+<option>National Solar Radiation Database (NSRDB)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-on-surface-variant pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Confidence Interval Threshold Radio Buttons -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest">
+<label class="font-label-md text-label-md text-on-surface block mb-2 font-medium">Dispatch Confidence Interval Threshold</label>
+<div class="grid grid-cols-3 gap-space-sm">
+<label class="cursor-pointer">
+<input class="peer sr-only" name="confidence" type="radio" value="90"/>
+<div class="p-2.5 rounded-DEFAULT bg-surface-container text-center text-on-surface-variant peer-checked:bg-surface-container-highest peer-checked:text-primary transition-all">
+<div class="font-headline-sm text-headline-sm">90%</div>
+<div class="font-label-sm text-label-sm">High Agility</div>
+</div>
+</label>
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="confidence" type="radio" value="95"/>
+<div class="p-2.5 rounded-DEFAULT bg-surface-container text-center text-on-surface-variant peer-checked:bg-primary/20 peer-checked:text-primary transition-all relative">
+<div class="font-headline-sm text-headline-sm font-semibold">95%</div>
+<div class="font-label-sm text-label-sm text-secondary font-medium">Recommended</div>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="confidence" type="radio" value="99"/>
+<div class="p-2.5 rounded-DEFAULT bg-surface-container text-center text-on-surface-variant peer-checked:bg-surface-container-highest peer-checked:text-primary transition-all">
+<div class="font-headline-sm text-headline-sm">99%</div>
+<div class="font-label-sm text-label-sm">Ultra Safe</div>
+</div>
+</label>
+</div>
+</div>
+<!-- Autonomous Mode Authority Level -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest">
+<label class="font-label-md text-label-md text-on-surface block mb-1.5 font-medium">Autonomous Mode Authority Level</label>
+<div class="relative">
+<select class="w-full bg-surface-container text-on-surface font-body-md text-body-md px-space-md py-2.5 rounded-DEFAULT appearance-none focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer pr-10">
+<option selected="">Supervised Autonomy (Auto-execute routine peak shaving, notify on contingency events)</option>
+<option>Full Autonomy (Auto-shed, continuous islanding switches without manual gate)</option>
+<option>Advisory Only (AI proposes dispatches; requires human operator sign-off)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant px-1">
+<span>Model Architecture: Multi-head Attention + Residual Feedforward</span>
+<span class="text-primary font-mono">WEIGHT HASH: 0x8F9C42A</span>
+</div>
+</section>
+<!-- Card 4: Display, Notifications & SCADA Preferences (Span 5 cols) -->
+<section class="lg:col-span-5 bg-surface-container rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<!-- Header -->
+<div class="flex items-start justify-between pb-space-md mb-space-md bg-surface-container-low/40 p-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 rounded-lg bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-2xl leading-none">settings_ethernet</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Display & Hardware Protocols</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SCADA Bus & Environment Settings</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">tune</span>
+</div>
+<div class="space-y-space-md">
+<!-- Interface Theme -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-medium block">Console Theme</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Locked for Mission-Control Ambient Specs</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-DEFAULT">
+<span class="material-symbols-outlined text-base text-primary">dark_mode</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Dark Mode</span>
+</div>
+</div>
+<!-- Temperature Units -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-medium block">Temperature Calibration</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chiller & Inverter Metrics</span>
+</div>
+<div class="flex bg-surface-container p-0.5 rounded-DEFAULT">
+<button class="px-3 py-1 rounded-DEFAULT bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold shadow-sm" type="button">
+                  °F (Imperial)
+                </button>
+<button class="px-3 py-1 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">
+                  °C
+                </button>
+</div>
+</div>
+<!-- Real-time Audio Chimes Toggle -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest">
+<div class="pr-space-md">
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Critical Acoustic Alarm</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Audio chimes silent for routine load shaves; triggers high-priority horn during emergency breaker trips or hard threshold breaches.
+                </span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<!-- Webhook & SCADA Protocol Details -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary">cable</span>
+<span class="font-label-md text-label-md text-on-surface font-medium">SCADA & Gateway Connection</span>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container/20 text-secondary px-2 py-0.5 rounded-DEFAULT">CONNECTED</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-DEFAULT font-mono text-body-sm space-y-1">
+<div class="flex justify-between text-on-surface-variant">
+<span>Protocol:</span>
+<span class="text-on-surface">DNP3 / Modbus TCP</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Host IP:</span>
+<span class="text-primary">10.240.12.8:502</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>RTU Poll Interval:</span>
+<span class="text-on-surface">100 ms</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Telemetry Status Indicator -->
+<div class="mt-space-md p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Inverter Firmware: v4.81-rc2</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            RTU Heartbeat OK
+          </span>
+</div>
+</section>
+</div>
+<!-- Sticky Operational Footer Bar -->
+<div class="w-full bg-surface-container-lowest p-space-md rounded-xl shadow-lg flex flex-col sm:flex-row items-center justify-between gap-space-md mt-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-xl leading-none">verified_user</span>
+<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">All parameters validated against IEEE 1547 grid interconnect standards</span>
+<span class="hidden sm:inline text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Last modified 2 hours ago by <strong class="text-on-surface">Elena Rostova</strong></span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<span class="font-label-sm text-label-sm text-secondary font-medium hidden" id="save-status">Saved successfully</span>
+<button class="w-full sm:w-auto px-space-lg py-2 rounded-lg bg-primary hover:bg-surface-tint text-on-primary-fixed transition-all font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-[0_0_12px_rgba(76,215,246,0.3)]" onclick="triggerSaveAnimation()" type="button">
+<span class="material-symbols-outlined text-lg leading-none font-bold">save</span>
+<span>Save Configuration</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Slider Value Reactive Micro-Interaction
+  const reserveSlider = document.getElementById('reserve-slider');
+  const bufferVal = document.getElementById('buffer-val');
+  if (reserveSlider && bufferVal) {
+    reserveSlider.addEventListener('input', (e) => {
+      bufferVal.textContent = e.target.value + '%';
+    });
+  }
+
+  // Interactive Save confirmation micro-interaction
+  function triggerSaveAnimation() {
+    const status = document.getElementById('save-status');
+    if (status) {
+      status.classList.remove('hidden');
+      status.textContent = 'Synchronizing with RTU Bus...';
+      setTimeout(() => {
+        status.textContent = 'All parameters synchronized & applied';
+        setTimeout(() => {
+          status.classList.add('hidden');
+        }, 3000);
+      }, 700);
+    }
+  }
+
+  const topSaveBtn = document.getElementById('save-btn');
+  if (topSaveBtn) {
+    topSaveBtn.addEventListener('click', triggerSaveAnimation);
+  }
+</script></main></div></body></html>

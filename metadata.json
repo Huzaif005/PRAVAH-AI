@@ -1,0 +1,6 @@
+{
+  "name": "GridMind AI — Intelligence",
+  "description": "Smart Energy Microgrid AI Control & Forecasting Platform with real-time demand prediction, digital twin stress simulation, and autonomous BESS dispatch.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

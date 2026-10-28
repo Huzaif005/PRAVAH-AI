@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GridMind AI — Powering Smarter Decisions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              cyan: '#06b6d4',
+              cyanGlow: 'rgba(6, 182, 212, 0.15)',
+              emerald: '#10b981',
+              emeraldGlow: 'rgba(16, 185, 129, 0.15)',
+              navy: '#0a0e18',
+              surface: '#0f131d',
+              card: '#131722',
+              border: '#1e2433',
+              subtle: '#262d3d'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0a0e18;
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    }
+    .pulse-subtle {
+      animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.02); }
+    }
+    .flow-line {
+      stroke-dasharray: 4, 4;
+      animation: dashFlow 20s linear infinite;
+    }
+    @keyframes dashFlow {
+      to { stroke-dashoffset: -80; }
+    }
+  </style>
+</head>
+<body class="relative min-h-screen selection:bg-cyan-500/30 selection:text-cyan-200 overflow-x-hidden">
+
+  <!-- Ambient Background Gradients (Restrained & Minimal) -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="grid-pattern absolute inset-0 opacity-70"></div>
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-cyan-500/10 blur-[130px] rounded-full"></div>
+    <div class="absolute top-[600px] -right-40 w-[600px] h-[400px] bg-emerald-500/5 blur-[150px] rounded-full"></div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="relative z-10 flex flex-col min-h-screen">
+
+    <!-- 1. SLIM MINIMAL NAVBAR -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0a0e18]/85 border-b border-[#1e2433]/70 transition-all">
+      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2.5 group">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-400 group-hover:border-cyan-400 transition-colors shadow-[0_0_15px_rgba(6,182,212,0.15)]">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-[15px] font-semibold tracking-tight text-white">GridMind</span>
+            <span class="text-[10px] font-medium uppercase tracking-wider text-cyan-400 bg-cyan-950/60 border border-cyan-800/40 px-1.5 py-0.5 rounded">AI</span>
+          </div>
+        </a>
+
+        <!-- Links -->
+        <nav class="hidden md:flex items-center gap-8 text-[13px] font-medium text-slate-400">
+          <a href="#product" class="hover:text-white transition-colors">Product</a>
+          <a href="#capabilities" class="hover:text-white transition-colors">Features</a>
+          <a href="#about" class="hover:text-white transition-colors">About</a>
+        </nav>
+
+        <!-- Launch Dashboard Action -->
+        <div class="flex items-center gap-3">
+          <a href="#product" class="inline-flex items-center gap-1.5 text-xs font-medium px-3.5 py-1.5 rounded-md bg-[#131722] hover:bg-[#1a202e] text-slate-200 hover:text-white border border-[#262d3d] hover:border-cyan-500/40 transition-all duration-200 group shadow-sm">
+            <span>Launch Dashboard</span>
+            <svg class="w-3 h-3 text-cyan-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2 & 3. HERO SECTION & SIGNATURE VISUAL -->
+    <main class="flex-1">
+      <section class="max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-16 lg:pb-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Left Column: Copy & CTAs (7 Cols) -->
+          <div class="lg:col-span-7 flex flex-col items-start pr-0 lg:pr-6">
+            
+            <!-- Category Tag -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/40 border border-cyan-500/25 text-cyan-400 text-[11px] font-semibold tracking-wider uppercase mb-6">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span>
+              AI-POWERED ENERGY INTELLIGENCE
+            </div>
+
+            <!-- Headline -->
+            <h1 class="text-4xl sm:text-5xl lg:text-[56px] leading-[1.12] font-bold tracking-tight text-white mb-6">
+              Powering Smarter Decisions. <br class="hidden sm:inline" />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400">
+                Predicting Tomorrow's Energy.
+              </span>
+            </h1>
+
+            <!-- Description -->
+            <p class="text-base sm:text-lg text-slate-400 font-normal leading-relaxed max-w-xl mb-9">
+              Forecast electricity demand, explore microgrid scenarios, and make more informed energy decisions with AI.
+            </p>
+
+            <!-- Actions -->
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+              <a href="#product" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-[#0a0e18] font-semibold text-sm transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.45)] group">
+                <span>Explore Dashboard</span>
+                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </a>
+
+              <a href="#capabilities" class="inline-flex items-center gap-1.5 text-sm font-medium text-slate-300 hover:text-white group transition-colors py-2">
+                <span>Discover the Platform</span>
+                <svg class="w-4 h-4 text-cyan-400 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Validation Note -->
+            <div class="mt-10 flex items-center gap-6 text-xs text-slate-500 border-t border-[#1e2433] pt-6 w-full max-w-lg">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Deterministic Contingency Solvers</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                <span>IEEE 1547.4 Standard Ready</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Signature Microgrid Visual (5 Cols) -->
+          <div class="lg:col-span-5 relative flex justify-center items-center">
+            
+            <!-- Glow background behind schematic -->
+            <div class="absolute w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- The Visual Canvas Card -->
+            <div class="relative w-full max-w-[460px] rounded-2xl bg-[#0f131d]/90 border border-[#1e2433] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-sm">
+              
+              <!-- Subtle Card Header Bar -->
+              <div class="flex items-center justify-between pb-4 border-b border-[#1e2433]/80 text-[11px] font-medium text-slate-400">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span class="tracking-wide text-slate-300 uppercase font-semibold text-[10px]">Microgrid Bus Architecture</span>
+                </div>
+                <span class="text-slate-500 font-mono text-[10px]">SYNCHRONOUS // 480V</span>
+              </div>
+
+              <!-- Vector Microgrid Illustration -->
+              <div class="relative py-4 flex items-center justify-center">
+                <svg viewBox="0 0 400 300" class="w-full h-auto overflow-visible" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <!-- Cyan Gradient for Center Node -->
+                    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8"/>
+                      <stop offset="60%" stop-color="#0891b2" stop-opacity="0.3"/>
+                      <stop offset="100%" stop-color="#0891b2" stop-opacity="0"/>
+                    </radialGradient>
+                    <!-- Emerald Node Gradient -->
+                    <radialGradient id="solarGlow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#10b981" stop-opacity="0.4"/>
+                      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+                    </radialGradient>
+                  </defs>
+
+                  <!-- Conduit Lines connecting to Central AC Bus -->
+                  <!-- Utility Grid (Left) -> Center -->
+                  <path d="M 65 140 L 200 140" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.5" class="flow-line" />
+                  
+                  <!-- Solar PV (Top) -> Center -->
+                  <path d="M 200 50 L 200 140" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.6" class="flow-line" />
+                  
+                  <!-- Battery Storage (Bottom) -> Center -->
+                  <path d="M 200 230 L 200 140" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.4" class="flow-line" />
+                  
+                  <!-- Center -> Facility Load (Right) -->
+                  <path d="M 200 140 L 335 140" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.6" class="flow-line" />
+
+                  <!-- 1. Utility Grid Node (Left) -->
+                  <g transform="translate(65, 140)">
+                    <circle r="22" fill="#131722" stroke="#1e2433" stroke-width="1.5" />
+                    <circle r="18" fill="#0f131d" />
+                    <!-- Grid Tower Icon -->
+                    <path d="M -7 -7 L 7 -7 M -5 0 L 5 0 M -8 7 L 8 7 M -4 -7 L -7 8 M 4 -7 L 7 8 M 0 -7 L 0 8" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" />
+                    <text y="32" text-anchor="middle" fill="#64748b" font-size="9" font-weight="600" letter-spacing="0.5">MAIN GRID</text>
+                  </g>
+
+                  <!-- 2. Rooftop Solar PV Node (Top) -->
+                  <g transform="translate(200, 50)">
+                    <circle r="28" fill="url(#solarGlow)" />
+                    <circle r="22" fill="#131722" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.5" />
+                    <circle r="18" fill="#0f131d" />
+                    <!-- Sun / Solar Icon -->
+                    <circle r="4" fill="#10b981" />
+                    <path d="M 0 -8 L 0 -6 M 0 8 L 0 6 M -8 0 L -6 0 M 8 0 L 6 0 M -5 -5 L -4 -4 M 5 5 L 4 4 M -5 5 L -4 4 M 5 -5 L 4 -4" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" />
+                    <text y="-28" text-anchor="middle" fill="#10b981" font-size="9" font-weight="600" letter-spacing="0.5">SOLAR ARRAY</text>
+                  </g>
+
+                  <!-- 3. Battery Storage (BESS) Node (Bottom) -->
+                  <g transform="translate(200, 230)">
+                    <circle r="22" fill="#131722" stroke="#1e2433" stroke-width="1.5" />
+                    <circle r="18" fill="#0f131d" />
+                    <!-- Battery Icon -->
+                    <rect x="-6" y="-7" width="12" height="15" rx="2" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+                    <rect x="-2" y="-9" width="4" height="2" rx="0.5" fill="#94a3b8" />
+                    <path d="M 0 -3 L -2 0 L 0 0 L -1 3 L 2 -0.5 L 0 -0.5 Z" fill="#06b6d4" />
+                    <text y="34" text-anchor="middle" fill="#64748b" font-size="9" font-weight="600" letter-spacing="0.5">BESS STORAGE</text>
+                  </g>
+
+                  <!-- 4. Facility Load Core (Right) -->
+                  <g transform="translate(335, 140)">
+                    <circle r="22" fill="#131722" stroke="#1e2433" stroke-width="1.5" />
+                    <circle r="18" fill="#0f131d" />
+                    <!-- Campus Building Icon -->
+                    <path d="M -7 7 L -7 -5 L 1 -5 L 1 7 M 1 -1 L 7 -1 L 7 7 M -4 -2 L -2 -2 M -4 2 L -2 2 M 3 2 L 5 2" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" />
+                    <text y="32" text-anchor="middle" fill="#64748b" font-size="9" font-weight="600" letter-spacing="0.5">CAMPUS LOAD</text>
+                  </g>
+
+                  <!-- Central Glowing Energy Node (Bus Controller) -->
+                  <g transform="translate(200, 140)">
+                    <!-- Subtle pulsing halo -->
+                    <circle r="36" fill="url(#centerGlow)" class="pulse-subtle" />
+                    <circle r="20" fill="#0e1726" stroke="#06b6d4" stroke-width="2" />
+                    <circle r="15" fill="#06b6d4" fill-opacity="0.15" />
+                    <!-- Circuit Microgrid Node symbol -->
+                    <circle r="4" fill="#06b6d4" />
+                    <line x1="-8" y1="0" x2="-4" y2="0" stroke="#06b6d4" stroke-width="1.5" />
+                    <line x1="4" y1="0" x2="8" y2="0" stroke="#06b6d4" stroke-width="1.5" />
+                    <line x1="0" y1="-8" x2="0" y2="-4" stroke="#06b6d4" stroke-width="1.5" />
+                    <line x1="0" y1="4" x2="0" y2="8" stroke="#06b6d4" stroke-width="1.5" />
+                  </g>
+
+                  <!-- Integrated 24H Mini Demand Curve Illustration -->
+                  <g transform="translate(60, 240)">
+                    <rect x="0" y="0" width="280" height="42" rx="6" fill="#0b0f19" stroke="#1a202c" stroke-width="1" />
+                    <!-- Grid line -->
+                    <line x1="10" y1="28" x2="270" y2="28" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
+                    <!-- Threshold alert line (soft cap) -->
+                    <line x1="10" y1="12" x2="270" y2="12" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 3" />
+                    <!-- Baseline curve -->
+                    <path d="M 15 28 Q 60 27, 90 20 T 150 18 T 195 10 T 235 24 T 265 27" fill="none" stroke="#334155" stroke-width="1.5" />
+                    <!-- Optimized AI Shaved Demand Curve -->
+                    <path d="M 15 28 Q 60 27, 90 23 T 150 22 T 195 14 T 235 24 T 265 27" fill="none" stroke="#06b6d4" stroke-width="2" />
+                    <!-- Peak Shave Marker Point -->
+                    <circle cx="195" cy="14" r="3" fill="#06b6d4" />
+                    <circle cx="195" cy="14" r="6" fill="#06b6d4" fill-opacity="0.25" />
+                  </g>
+
+                </svg>
+              </div>
+
+              <!-- Floating Metric Pill Overlay -->
+              <div class="mt-2 flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[#131722] border border-[#262d3d] shadow-sm">
+                <div class="flex items-center gap-2">
+                  <div class="w-1.5 h-1.5 rounded-full bg-cyan-400"></div>
+                  <span class="text-[11px] font-semibold tracking-wider text-slate-300">24H · DEMAND FORECAST</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs font-mono">
+                  <span class="text-slate-400">Peak Shave:</span>
+                  <span class="text-emerald-400 font-semibold">-28.6 kW</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 4. MINIMAL CAPABILITY STRIP -->
+      <section id="capabilities" class="border-y border-[#1e2433]/80 bg-[#0c101a]/70 backdrop-blur-sm py-8">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            
+            <!-- Item 1: 24H Forecasting -->
+            <div class="flex items-start gap-3.5 group">
+              <div class="w-9 h-9 rounded-lg bg-cyan-950/40 border border-cyan-500/20 flex-shrink-0 flex items-center justify-center text-cyan-400 group-hover:border-cyan-500/50 transition-colors">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-sm font-semibold text-white tracking-tight mb-1">24H Forecasting</h2>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Atmospheric co-variable modeling delivering accurate hourly load projections before peak tariff windows.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 2: Microgrid Simulation -->
+            <div class="flex items-start gap-3.5 group">
+              <div class="w-9 h-9 rounded-lg bg-emerald-950/40 border border-emerald-500/20 flex-shrink-0 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/50 transition-colors">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-sm font-semibold text-white tracking-tight mb-1">Microgrid Simulation</h2>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Interactive operational sandbox to stress-test battery reserves, cloud cover, and islanding contingencies.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 3: Explainable Decisions -->
+            <div class="flex items-start gap-3.5 group">
+              <div class="w-9 h-9 rounded-lg bg-indigo-950/40 border border-indigo-500/20 flex-shrink-0 flex items-center justify-center text-indigo-400 group-hover:border-indigo-500/50 transition-colors">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-sm font-semibold text-white tracking-tight mb-1">Explainable Decisions</h2>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Transparent algorithmic rationale balancing peak demand shaving, TOU rates, and battery degradation.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. PRODUCT PREVIEW SECTION -->
+      <section id="product" class="max-w-7xl mx-auto px-6 py-20 lg:py-28">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-[11px] font-medium tracking-wider uppercase mb-3">
+            MISSION-CRITICAL CONSOLE
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+            See the Bigger Energy Picture.
+          </h2>
+          <p class="text-base text-slate-400 leading-relaxed">
+            From demand forecasts to scenario exploration, understand what could happen before making a decision.
+          </p>
+        </div>
+
+        <!-- Carefully Cropped Premium Dashboard Preview Frame -->
+        <div class="relative max-w-5xl mx-auto rounded-2xl bg-[#0f131d] border border-[#1e2433] shadow-[0_25px_60px_rgba(0,0,0,0.7)] overflow-hidden">
+          
+          <!-- Top Window Chrome -->
+          <div class="px-5 py-3.5 bg-[#0a0e18] border-b border-[#1e2433] flex items-center justify-between text-xs">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
+              <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+              <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+              <span class="ml-3 font-mono text-[11px] text-slate-400">gridmind.intelligence/console/alpha-04</span>
+            </div>
+            <div class="flex items-center gap-4 text-[11px] text-slate-400">
+              <span class="inline-flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                Latency: 12ms
+              </span>
+              <span class="bg-[#171b26] border border-[#262d3d] px-2 py-0.5 rounded text-slate-300">Austin Sector (ERCOT)</span>
+            </div>
+          </div>
+
+          <!-- Inside Dashboard: Compact Metrics + Centered Demand Curve -->
+          <div class="p-6 md:p-8 bg-[#0d111a]">
+            
+            <!-- Compact Metrics Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+              
+              <!-- Metric 1 -->
+              <div class="p-4 rounded-xl bg-[#131724] border border-[#1e2433]">
+                <div class="text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-1">Predicted Peak</div>
+                <div class="text-2xl font-bold text-white tracking-tight">184.6 <span class="text-xs font-normal text-slate-400">kW</span></div>
+                <div class="mt-1 text-[11px] text-cyan-400 flex items-center gap-1">
+                  <span>↓ 28.6 kW vs unmanaged</span>
+                </div>
+              </div>
+
+              <!-- Metric 2 -->
+              <div class="p-4 rounded-xl bg-[#131724] border border-[#1e2433]">
+                <div class="text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-1">24H Energy Demand</div>
+                <div class="text-2xl font-bold text-white tracking-tight">3,842 <span class="text-xs font-normal text-slate-400">kWh</span></div>
+                <div class="mt-1 text-[11px] text-emerald-400 flex items-center gap-1">
+                  <span>-2.1% via AI pre-cooling</span>
+                </div>
+              </div>
+
+              <!-- Metric 3 -->
+              <div class="p-4 rounded-xl bg-[#131724] border border-[#1e2433]">
+                <div class="text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-1">Operating Mode</div>
+                <div class="text-base font-bold text-white tracking-tight flex items-center gap-2 mt-1">
+                  <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                  Autonomous
+                </div>
+                <div class="mt-1 text-[11px] text-slate-400">
+                  Grid Synchronized
+                </div>
+              </div>
+
+              <!-- Metric 4 -->
+              <div class="p-4 rounded-xl bg-[#131724] border border-[#1e2433]">
+                <div class="text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-1">Threshold Security</div>
+                <div class="text-2xl font-bold text-emerald-400 tracking-tight">0 <span class="text-xs font-normal text-slate-400">Breaches</span></div>
+                <div class="mt-1 text-[11px] text-slate-400">
+                  Soft Cap (160kW) protected
+                </div>
+              </div>
+
+            </div>
+
+            <!-- The Big Beautiful 24-Hour Demand Chart Canvas -->
+            <div class="rounded-xl bg-[#101420] border border-[#1e2433] p-5">
+              <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+                <div>
+                  <h3 class="text-sm font-semibold text-white">24-Hour Load Horizon & Shaved Peak Profile</h3>
+                  <p class="text-xs text-slate-400">Neural forecast with BESS battery peak shaving injection</p>
+                </div>
+                <div class="flex items-center gap-4 text-xs">
+                  <span class="flex items-center gap-1.5 text-slate-400">
+                    <span class="w-3 h-0.5 bg-slate-500"></span> Baseline Unmanaged
+                  </span>
+                  <span class="flex items-center gap-1.5 text-cyan-400">
+                    <span class="w-3 h-0.5 bg-cyan-400"></span> Autonomous Profile
+                  </span>
+                  <span class="flex items-center gap-1.5 text-emerald-400">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Solar PV
+                  </span>
+                </div>
+              </div>
+
+              <!-- Vector Chart Preview -->
+              <div class="relative w-full h-56 sm:h-64">
+                <svg class="w-full h-full" viewBox="0 0 900 240" fill="none" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="tariffWindow" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.12"/>
+                      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.01"/>
+                    </linearGradient>
+                    <linearGradient id="cyanShade" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25"/>
+                      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.0"/>
+                    </linearGradient>
+                    <linearGradient id="solarShade" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#10b981" stop-opacity="0.2"/>
+                      <stop offset="100%" stop-color="#10b981" stop-opacity="0.0"/>
+                    </linearGradient>
+                  </defs>
+
+                  <!-- Horizontal Grid Lines -->
+                  <line x1="40" y1="40" x2="880" y2="40" stroke="#1e2433" stroke-dasharray="3 3"/>
+                  <text x="30" y="44" fill="#64748b" font-size="10" text-anchor="end" font-family="monospace">200kW</text>
+
+                  <line x1="40" y1="90" x2="880" y2="90" stroke="#1e2433" stroke-dasharray="3 3"/>
+                  <text x="30" y="94" fill="#64748b" font-size="10" text-anchor="end" font-family="monospace">160kW</text>
+
+                  <line x1="40" y1="150" x2="880" y2="150" stroke="#1e2433" stroke-dasharray="3 3"/>
+                  <text x="30" y="154" fill="#64748b" font-size="10" text-anchor="end" font-family="monospace">100kW</text>
+
+                  <line x1="40" y1="210" x2="880" y2="210" stroke="#1e2433" />
+                  <text x="30" y="214" fill="#64748b" font-size="10" text-anchor="end" font-family="monospace">40kW</text>
+
+                  <!-- Critical Threshold Line (Red Dashed @ 200kW) -->
+                  <line x1="40" y1="40" x2="880" y2="40" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4 4" stroke-opacity="0.6"/>
+                  
+                  <!-- Soft Warning Cap (Amber Dashed @ 160kW) -->
+                  <line x1="40" y1="90" x2="880" y2="90" stroke="#f59e0b" stroke-width="1.2" stroke-dasharray="4 4" stroke-opacity="0.7"/>
+
+                  <!-- Peak Tariff Highlight Window (18:00 - 22:00 -> x: 620 to 780) -->
+                  <rect x="620" y="30" width="160" height="180" fill="url(#tariffWindow)" />
+                  <line x1="620" y1="30" x2="620" y2="210" stroke="#ef4444" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="2 2" />
+                  <line x1="780" y1="30" x2="780" y2="210" stroke="#ef4444" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="2 2" />
+                  <text x="700" y="45" fill="#f87171" font-size="9" text-anchor="middle" font-weight="600" letter-spacing="0.5">PEAK TARIFF WINDOW</text>
+
+                  <!-- Solar Generation Curve (Middle of Day) -->
+                  <path d="M 240 210 Q 420 70, 580 210 Z" fill="url(#solarShade)" />
+                  <path d="M 240 210 Q 420 70, 580 210" stroke="#10b981" stroke-width="2" fill="none" />
+
+                  <!-- Unmitigated Baseline Demand (Surging through warning cap) -->
+                  <path d="M 40 185 C 180 185, 260 145, 380 140 C 500 135, 620 90, 690 55 C 730 35, 760 110, 880 180" stroke="#475569" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+
+                  <!-- Autonomous Shaved Peak Profile (Controlled under 160kW) -->
+                  <path d="M 40 185 C 180 185, 260 145, 380 140 C 500 135, 620 115, 690 102 C 730 96, 760 120, 880 180 L 880 210 L 40 210 Z" fill="url(#cyanShade)" />
+                  <path d="M 40 185 C 180 185, 260 145, 380 140 C 500 135, 620 115, 690 102 C 730 96, 760 120, 880 180" stroke="#06b6d4" stroke-width="2.5" fill="none"/>
+
+                  <!-- Shaved Event Marker Annotation -->
+                  <g transform="translate(690, 102)">
+                    <circle r="4" fill="#06b6d4" />
+                    <circle r="8" fill="#06b6d4" fill-opacity="0.2" />
+                    <rect x="-45" y="-38" width="90" height="26" rx="4" fill="#0a0e18" stroke="#06b6d4" stroke-width="1" />
+                    <text x="0" y="-22" text-anchor="middle" fill="#38bdf8" font-size="9" font-weight="600">19:30 Shaved</text>
+                  </g>
+
+                  <!-- Time X-Axis Labels -->
+                  <text x="40" y="226" fill="#64748b" font-size="10" font-family="monospace">00:00</text>
+                  <text x="180" y="226" fill="#64748b" font-size="10" font-family="monospace">04:00</text>
+                  <text x="320" y="226" fill="#64748b" font-size="10" font-family="monospace">08:00</text>
+                  <text x="460" y="226" fill="#64748b" font-size="10" font-family="monospace">12:00 (Solar Peak)</text>
+                  <text x="620" y="226" fill="#64748b" font-size="10" font-family="monospace">16:00</text>
+                  <text x="700" y="226" fill="#06b6d4" font-weight="600" font-size="10" font-family="monospace">19:30</text>
+                  <text x="860" y="226" fill="#64748b" font-size="10" font-family="monospace">24:00</text>
+                </svg>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Bottom subtle fade/crop overlay giving it a modern glimpse aesthetic -->
+          <div class="h-6 bg-gradient-to-t from-[#0a0e18] to-transparent"></div>
+
+        </div>
+
+      </section>
+
+      <!-- 6. MINIMAL FOOTER -->
+      <footer id="about" class="border-t border-[#1e2433] bg-[#0a0e18] py-12">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#171b26]">
+            
+            <!-- Logo & Tagline -->
+            <div class="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-md bg-gradient-to-br from-cyan-500/30 to-emerald-500/30 border border-cyan-500/40 flex items-center justify-center text-cyan-400">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+                <span class="text-sm font-semibold tracking-tight text-white">GridMind AI</span>
+              </div>
+              <span class="hidden sm:inline text-slate-600">·</span>
+              <p class="text-xs text-slate-400">
+                Intelligence for a more resilient energy future.
+              </p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex items-center gap-6 text-xs text-slate-400">
+              <a href="#product" class="hover:text-white transition-colors">Documentation</a>
+              <a href="#capabilities" class="hover:text-white transition-colors">System Architecture</a>
+              <a href="#product" class="hover:text-white transition-colors">Security & IEEE</a>
+              <a href="#product" class="hover:text-white transition-colors">Contact</a>
+            </div>
+
+          </div>
+
+          <!-- Sub-footer: HackSphere 3.0 Label & Copyright -->
+          <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+            <div>
+              Designed for <span class="text-slate-300 font-medium">HackSphere 3.0</span> · Smart Energy Microgrid Category
+            </div>
+            <div>
+              © 2025 GridMind AI Systems. All rights reserved. Illustrative mock interface.
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+---
+name: GridMind AI
+colors:
+  surface: '#0f131d'
+  surface-dim: '#0f131d'
+  surface-bright: '#353944'
+  surface-container-lowest: '#0a0e18'
+  surface-container-low: '#171b26'
+  surface-container: '#1c1f2a'
+  surface-container-high: '#262a35'
+  surface-container-highest: '#313540'
+  on-surface: '#dfe2f1'
+  on-surface-variant: '#bcc9cd'
+  inverse-surface: '#dfe2f1'
+  inverse-on-surface: '#2c303b'
+  outline: '#869397'
+  outline-variant: '#3d494c'
+  surface-tint: '#4cd7f6'
+  primary: '#4cd7f6'
+  on-primary: '#003640'
+  primary-container: '#06b6d4'
+  on-primary-container: '#00424f'
+  inverse-primary: '#00687a'
+  secondary: '#4edea3'
+  on-secondary: '#003824'
+  secondary-container: '#00a572'
+  on-secondary-container: '#00311f'
+  tertiary: '#d0bcff'
+  on-tertiary: '#3c0091'
+  tertiary-container: '#b395ff'
+  on-tertiary-container: '#4900ae'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#acedff'
+  primary-fixed-dim: '#4cd7f6'
+  on-primary-fixed: '#001f26'
+  on-primary-fixed-variant: '#004e5c'
+  secondary-fixed: '#6ffbbe'
+  secondary-fixed-dim: '#4edea3'
+  on-secondary-fixed: '#002113'
+  on-secondary-fixed-variant: '#005236'
+  tertiary-fixed: '#e9ddff'
+  tertiary-fixed-dim: '#d0bcff'
+  on-tertiary-fixed: '#23005c'
+  on-tertiary-fixed-variant: '#5516be'
+  background: '#0f131d'
+  on-background: '#dfe2f1'
+  surface-variant: '#313540'
+typography:
+  display-lg:
+    fontFamily: Inter
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: 48px
+    letterSpacing: -0.02em
+  display-lg-mobile:
+    fontFamily: Inter
+    fontSize: 30px
+    fontWeight: '700'
+    lineHeight: 38px
+    letterSpacing: -0.01em
+  headline-xl:
+    fontFamily: Inter
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.015em
+  headline-xl-mobile:
+    fontFamily: Inter
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Inter
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: 24px
+    letterSpacing: -0.005em
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+    letterSpacing: 0em
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+    letterSpacing: 0em
+  body-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+    letterSpacing: 0.01em
+  label-md:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+  label-sm:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+    letterSpacing: 0.04em
+  mono-metric:
+    fontFamily: Inter
+    fontSize: 22px
+    fontWeight: '600'
+    lineHeight: 28px
+    letterSpacing: -0.01em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-lg: 1.5rem
+  margin: 1rem
+  margin-md: 1.5rem
+  margin-lg: 2rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 0.75rem
+  space-lg: 1.25rem
+  space-xl: 2rem
+---
+
+## Brand & Style
+
+This design system delivers a high-density, mission-critical operational cockpit engineered for energy grid operators, utility analysts, and automated microgrid controllers. The visual language blends the discipline of aerospace telemetry consoles with the sophisticated polish of modern enterprise intelligence platforms.
+
+### Personality & Emotional Tenor
+- **Operational Authority:** Uncompromising clarity, high information density, and instant situational awareness without cognitive fatigue.
+- **Predictive Precision:** Machine learning telemetry rendered with surgical typography and calibrated neon accents that signal state changes instantaneously.
+- **Technical Rigor:** Dark visual ergonomics calibrated for sustained monitoring in low-ambient control rooms and multi-monitor operations centers.
+
+### Visual Architecture
+The aesthetic draws from advanced telemetry control systems: deep slate and midnight backdrops punctuated by razor-sharp borders, translucent dark glass cards, and focused, luminous data nodes. High-contrast status accents illuminate live load distributions, dynamic battery reserves, and forecasting bands while keeping baseline chrome restrained and unobtrusive.
+
+## Colors
+
+The palette is anchored by deep navy and slate tones, engineered to maximize the contrast of luminescent visual cues without eye strain during continuous shifts.
+
+### Core Architecture
+- **Primary (`#06B6D4` / `#22D3EE`):** Electric Cyan represents baseline energy telemetry, power flow vectors, active selections, and interactive primary controls.
+- **Secondary (`#10B981` / `#34D399`):** Emerald represents renewable generation sources, solar capture rates, storage replenishment, and healthy grid balance.
+- **Tertiary (`#8B5CF6` / `#A78BFA`):** Soft Violet indicates predictive AI forecasts, demand-response model confidence, and autonomous recommendations.
+- **Neutral Canvas (`#0B0F19`, `#111827`, `#1E293B`):** Multi-tier obsidian base surfaces provide depth separation while maintaining near-zero light emission.
+
+### Operational State Tones
+- **Amber Warning (`#F59E0B`):** Peaking demand thresholds, thermal stress alerts, and predictive capacity limits.
+- **Coral Red (`#EF4444`):** Grid disconnects, phase mismatches, overload trips, and critical safety telemetry.
+- **Subtle Surface Lineage:** Borders utilize muted slate (`#1E293B` with 80% opacity) elevated to glowing cyan traces (`rgba(6, 182, 212, 0.25)`) when active or selected.
+
+## Typography
+
+The typographical scale is built exclusively on Inter, leaning heavily into its tabular numeric features (`tnum`) to eliminate horizontal jitter during live telemetry updates.
+
+### Usage Standards
+- **Telemetry KPIs & Real-Time Metrics:** Utilize `mono-metric` paired with CSS `font-feature-settings: 'tnum' on, 'zero' on`. Numerical readouts (megawatts, frequency deviations, and predictive percentages) must maintain rigid tabular alignments.
+- **Hierarchy & Titles:** Headlines favor medium-to-bold weights with slight negative letter tracking for compact structural integrity.
+- **Labels & Micro-Data:** Metadata labels, micro-tags, and status indicators use uppercase styling with tracked `label-sm` to maintain instant scanning legibility even at 11px.
+
+## Layout & Spacing
+
+This design system uses a dense 12-column responsive fluid grid with compact spacing tokens to maximize continuous data density while isolating distinct operational zones.
+
+### Spatial Blueprint
+- **Desktop (1440px+):** 12-column layout, `gutter-lg` (24px), canvas outer margins of `margin-lg` (32px). Dedicated persistent telemetry sidebar (300px fixed) with fluid operational workspace.
+- **Tablet / Mid-tier Screens (768px – 1439px):** 8-column layout, `gutter` (16px), margins of `margin-md` (24px). Control ribbons collapse into segmented selector bars.
+- **Mobile (below 768px):** 4-column layout, `gutter` (12px), canvas margin of `margin` (16px). Microgrid operational flows reflow into stacked priority cards with horizontally scrollable telemetry ribbons.
+
+### Density Rules
+Padding within cards and modules prioritizes compact efficiency (`space-md` for standard cards, `space-sm` for metric pods) to avoid unnecessary scrolling during incident response.
+
+## Elevation & Depth
+
+Visual hierarchy does not rely on heavy drop shadows, which muddy dark interfaces. Instead, the design system utilizes translucent backdrop layers, luminosity stepping, and subtle edge lighting.
+
+### Layer Hierarchy
+1. **Canvas (Level 0 - `#0B0F19`):** Deepest background plane; hosts topological maps, network tree layouts, and grid schematics.
+2. **Container Tier (Level 1 - `#111827` / 85% opacity with 12px blur):** Card modules and analytical chart surfaces. Outlined with `1px solid rgba(30, 41, 59, 0.8)`.
+3. **Elevated Overlays & Inspector Panels (Level 2 - `#1E293B` / 95% opacity):** Tooltips, metric popovers, and sliding control panels. Elevated by a faint cyan perimeter trace: `box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.25), 0 8px 24px -4px rgba(0, 0, 0, 0.6)`.
+4. **Active Interactivity & Alerts (Level 3):** High-priority alerts and focused nodes emit a localized color aura (e.g., `0 0 16px rgba(6, 182, 212, 0.3)` or `0 0 16px rgba(239, 68, 68, 0.35)`).
+
+## Shapes
+
+The geometric architecture is crisp, technical, and restrained, using a roundedness factor of 1 (`0.25rem` or `4px` base radius).
+
+### Geometry Guidelines
+- **Base Components (Inputs, Buttons, Badges, Tabs):** Use the base `4px` radius. This maintains an engineered, instrument-panel aesthetic.
+- **Panels & Metric Cards:** Use `rounded-lg` (`8px`) to cleanly demarcate grouped modules without softening the technical tone.
+- **Telemetry Nodes & Pill Indicators:** Terminal status markers, switch toggles, and live heartbeat points remain circular or fully pill-shaped (`9999px`) to contrast against the angular framework of the grid.
+
+## Components
+
+### Buttons & Interactive Controls
+- **Primary Action (Grid Dispatch / Execute):** Solid electric cyan background (`#06B6D4`), dark charcoal text (`#080E1A`), font weight 600. Hover state introduces a luminous glow (`box-shadow: 0 0 12px rgba(6, 182, 212, 0.5)`).
+- **Secondary Action (Filter / Calibrate):** Translucent dark background (`#111827`), `1px` border of `rgba(30, 41, 59, 0.9)`, text in white. Hover shifts border to `rgba(6, 182, 212, 0.4)`.
+- **Tertiary / Utility:** Borderless with slate text (`#94A3B8`), shifting to high-contrast cyan on hover.
+
+### Telemetry KPI Cards
+- Encased in Level 1 frosted containers with `4px` rounded corners and subtle top-border highlights (`1px solid rgba(255, 255, 255, 0.05)`).
+- Card structure: Tracked category label (`label-sm`), high-contrast numeric output (`mono-metric`) with tabular numbers, and dynamic micro-trend indicators (emerald chevron for positive delta, amber for limit breach).
+
+### Energy-Flow Nodes & Threshold Markers
+- Nodes within microgrid visualizers use double-ringed SVGs. Center fill indicates asset status (green for battery charge, cyan for grid import, violet for AI active routing).
+- Threshold markers on gauge sliders employ crisp 2px vertical ticks, accented with glowing vertical lines when nominal parameters are surpassed.
+
+### Badges & Status Indicators
+- **Normal / Healthy:** Emerald text (`#34D399`) against `rgba(16, 185, 129, 0.12)` background, surrounded by a subtle `rgba(16, 185, 129, 0.3)` border.
+- **AI Recommendation:** Soft violet text (`#A78BFA`) against `rgba(139, 92, 246, 0.12)` background with an intermittent pulse dot.
+- **Warning / Alert:** Amber or coral text with corresponding low-opacity tinted surface fills.
+
+### Input Fields & Selectors
+- Background: `#0B0F19` with a persistent `1px` border of `#1E293B`.
+- Focus state: Border transitions to `#06B6D4` paired with an inner edge glow of `0 0 0 1px #06B6D4`. Text remains pure white with placeholder text set to slate (`#64748B`).
+
+### Checkboxes & Segmented Toggles
+- Checkboxes use `4px` corner rounding with dark slate backgrounds. When checked, the box fills with `#06B6D4` featuring an obsidian check icon.
+- Segmented switches (e.g., Historical vs. Predictive toggles) are contained in a unified `#0B0F19` trough, with the active tab elevated via `#1E293B` and an electric cyan underline indicator.

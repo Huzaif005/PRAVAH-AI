@@ -1,0 +1,267 @@
+@import "tailwindcss";
+
+@theme {
+  /* Exact Digital Luxury Editorial Color Tokens */
+  --color-canvas: #f3eee5;
+  --color-paper: #fcfaf6;
+  --color-white-surface: #ffffff;
+  --color-carbon: #29251f;
+  --color-oxide: #754536;
+  --color-oxide-hover: #61372b;
+  --color-sage: #b6bfa6;
+  --color-stone: #ddd5c9;
+  --color-muted: #716a61;
+  --color-success: #35674a;
+  --color-error: #a43e35;
+  --color-info: #315b85;
+
+  /* Compatibility mappings for existing components */
+  --color-surface: #f3eee5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fcfaf6;
+  --color-surface-container: #fcfaf6;
+  --color-surface-container-high: #efe9de;
+  --color-surface-container-highest: #e5dec9;
+  --color-on-surface: #29251f;
+  --color-on-surface-variant: #716a61;
+  --color-primary: #754536;
+  --color-primary-fixed: #61372b;
+  --color-on-primary: #ffffff;
+  --color-secondary: #35674a;
+  --color-on-secondary: #ffffff;
+  --color-tertiary: #315b85;
+  --color-outline: #716a61;
+  --color-outline-variant: #ddd5c9;
+
+  /* Typography */
+  --font-serif: "Playfair Display", Georgia, Cambria, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-headline: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", sans-serif;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: #f3eee5;
+    color: #29251f;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: #f3eee5;
+    color: #29251f;
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Accessible visible focus rings */
+  :focus-visible {
+    outline: 2px solid #754536;
+    outline-offset: 2px;
+  }
+}
+
+/* Typography & Utility Classes */
+.font-serif-editorial {
+  font-family: var(--font-serif);
+}
+
+.font-sans-ui {
+  font-family: var(--font-sans);
+}
+
+.font-mono-meta {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Restrained architectural grid texture */
+.editorial-grid-bg {
+  background-size: 48px 48px;
+  background-image:
+    linear-gradient(to right, rgba(221, 213, 201, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(221, 213, 201, 0.45) 1px, transparent 1px);
+}
+
+/* Renewable Energy Microgrid Landscape Backgrounds */
+.bg-energy-hero {
+  background-image: 
+    linear-gradient(to right, rgba(243, 238, 229, 0.85) 0%, rgba(243, 238, 229, 0.65) 35%, rgba(243, 238, 229, 0.20) 70%, rgba(243, 238, 229, 0.45) 100%),
+    linear-gradient(to bottom, rgba(243, 238, 229, 0.3) 0%, transparent 35%, rgba(243, 238, 229, 0.85) 100%),
+    url('/gridmind-hero-bg.jpg');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.bg-energy-cinematic {
+  background-image: 
+    linear-gradient(to bottom, rgba(243, 238, 229, 0.15) 0%, transparent 30%, rgba(243, 238, 229, 0.5) 100%),
+    url('/gridmind-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-energy-dark-showcase {
+  background-image: 
+    linear-gradient(to right, rgba(41, 37, 31, 0.88) 0%, rgba(41, 37, 31, 0.72) 50%, rgba(41, 37, 31, 0.55) 100%),
+    linear-gradient(to bottom, rgba(41, 37, 31, 0.7) 0%, rgba(41, 37, 31, 0.4) 50%, rgba(41, 37, 31, 0.90) 100%),
+    url('/gridmind-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-energy-ambient-card {
+  background-image: 
+    linear-gradient(to top, rgba(25, 23, 19, 0.88) 0%, rgba(25, 23, 19, 0.35) 60%, rgba(25, 23, 19, 0.15) 100%),
+    url('/gridmind-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-energy-watermark {
+  position: relative;
+}
+.bg-energy-watermark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 380px;
+  background-image: 
+    linear-gradient(to bottom, rgba(243, 238, 229, 0.25) 0%, rgba(243, 238, 229, 0.85) 80%, #f3eee5 100%),
+    url('/gridmind-hero-bg.jpg');
+  background-size: cover;
+  background-position: top center;
+  pointer-events: none;
+  opacity: 0.75;
+  z-index: 0;
+}
+
+/* Glassmorphism Luxury Panels */
+.glass-editorial-panel {
+  background: rgba(252, 250, 246, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 25px 60px -15px rgba(41, 37, 31, 0.15), 0 0 0 1px rgba(221, 213, 201, 0.35);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 6px 24px -4px rgba(41, 37, 31, 0.12), 0 0 0 1px rgba(221, 213, 201, 0.4);
+}
+
+/* Animated Glowing Stream & Beacon Pulses */
+@keyframes energyBeaconPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes energyAmberBeaconPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.6);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+  }
+}
+
+@keyframes waveFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.beacon-pulse-emerald {
+  animation: energyBeaconPulse 2.5s infinite;
+}
+
+.beacon-pulse-amber {
+  animation: energyAmberBeaconPulse 2.5s infinite;
+}
+
+.animate-wave-float {
+  animation: waveFloat 4s ease-in-out infinite;
+}
+
+/* Custom Range Input in Oxide & Stone */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #ddd5c9;
+  height: 4px;
+  border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #754536;
+  cursor: pointer;
+  border: 2px solid #fcfaf6;
+  box-shadow: 0 1px 3px rgba(41, 37, 31, 0.25);
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #61372b;
+  transform: scale(1.06);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #754536;
+  cursor: pointer;
+  border: 2px solid #fcfaf6;
+  box-shadow: 0 1px 3px rgba(41, 37, 31, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

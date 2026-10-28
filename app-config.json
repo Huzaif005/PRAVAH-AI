@@ -1,0 +1,15 @@
+{
+  "command": "node server.js",
+  "buildPath": ".",
+  "stack": "node20",
+  "env_variables": {
+    "NODE_ENV": "production",
+    "PORT": "3000",
+    "ZOHO_CATALYST_ORG_ID": "60093684405",
+    "ZOHO_CATALYST_PROJECT_ID": "99558000000013050",
+    "ZOHO_CATALYST_ENVIRONMENT": "Development",
+    "ZOHO_QUICKML_PIPELINE_ID": "8481000000002046",
+    "QUICKML_ENDPOINT_URL": "https://api.catalyst.zoho.in/baas/v1/project/99558000000013050/quickml/pipelines/8481000000002046/predict"
+  },
+  "memory": 512
+}

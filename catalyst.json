@@ -1,0 +1,8 @@
+{
+  "client": {
+    "source": "dist"
+  },
+  "appsail": {
+    "source": "."
+  }
+}
