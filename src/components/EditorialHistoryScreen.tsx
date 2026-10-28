@@ -116,44 +116,6 @@ export const EditorialHistoryScreen: React.FC<EditorialHistoryScreenProps> = ({
         </div>
 
         <div className="flex flex-wrap items-center gap-3 shrink-0">
-          {/* Interactive State Switcher to inspect Loading / Empty / Live states */}
-          <div
-            className="inline-flex rounded-[6px] border border-[#DDD5C9] bg-[#FCFAF6] p-0.5 text-[11px] font-mono-meta"
-            role="group"
-            aria-label="Preview interface states"
-          >
-            <button
-              onClick={() => setViewSimState('live')}
-              className={`px-2.5 py-1 rounded-[4px] cursor-pointer transition-colors ${
-                viewSimState === 'live'
-                  ? 'bg-[#29251F] text-[#FCFAF6]'
-                  : 'text-[#716A61] hover:text-[#29251F]'
-              }`}
-            >
-              Live ({analyses.length})
-            </button>
-            <button
-              onClick={() => setViewSimState('loading')}
-              className={`px-2.5 py-1 rounded-[4px] cursor-pointer transition-colors ${
-                viewSimState === 'loading'
-                  ? 'bg-[#29251F] text-[#FCFAF6]'
-                  : 'text-[#716A61] hover:text-[#29251F]'
-              }`}
-            >
-              Loading state
-            </button>
-            <button
-              onClick={() => setViewSimState('empty')}
-              className={`px-2.5 py-1 rounded-[4px] cursor-pointer transition-colors ${
-                viewSimState === 'empty'
-                  ? 'bg-[#29251F] text-[#FCFAF6]'
-                  : 'text-[#716A61] hover:text-[#29251F]'
-              }`}
-            >
-              Empty state
-            </button>
-          </div>
-
           <button
             onClick={() => onNavigate('workspace')}
             className="h-11 px-5 rounded-[6px] bg-[#754536] hover:bg-[#61372B] text-[#FFFFFF] text-[14px] font-medium transition-colors cursor-pointer"

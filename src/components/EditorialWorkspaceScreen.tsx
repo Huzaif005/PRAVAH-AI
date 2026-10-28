@@ -230,22 +230,6 @@ export const EditorialWorkspaceScreen: React.FC<EditorialWorkspaceScreenProps> =
             Configure feeder parameters, validate physical safety bounds, execute structured analysis, and record an auditable engineering decision.
           </p>
         </div>
-
-        {/* Fault-injection test toggle */}
-        <label
-          className="flex items-center gap-2.5 px-3.5 py-2 rounded-[6px] bg-[#FCFAF6] border border-[#DDD5C9] cursor-pointer select-none self-start md:self-auto"
-          title="Simulate a network/SCADA failure to test non-destructive input preservation and retry"
-        >
-          <input
-            type="checkbox"
-            checked={simulateFault}
-            onChange={(e) => setSimulateFault(e.target.checked)}
-            className="accent-[#A43E35] cursor-pointer"
-          />
-          <span className="font-mono-meta text-[11px] text-[#716A61]">
-            Simulate gateway timeout (test error &amp; retry)
-          </span>
-        </label>
       </div>
 
       {/* EXPLICIT 4-STAGE WORKFLOW STEPPER: INPUT → PROCESSING → RESULTS → DECISION */}

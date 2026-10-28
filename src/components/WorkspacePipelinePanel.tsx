@@ -245,7 +245,7 @@ export const WorkspacePipelinePanel: React.FC<WorkspacePipelinePanelProps> = ({
         <div>
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-primary font-semibold">
-              AI WORKSPACE &amp; DECISION PIPELINE
+              AI WORKSPACE &amp; DECISION ENGINE
             </span>
             <span className="text-outline-variant">·</span>
             <span className="font-mono text-[11px] text-on-surface-variant">
@@ -257,33 +257,8 @@ export const WorkspacePipelinePanel: React.FC<WorkspacePipelinePanelProps> = ({
           </p>
         </div>
 
-        {/* Execution & Diagnostic Controls */}
+        {/* Execution Controls */}
         <div className="flex flex-wrap items-center gap-2.5">
-          {/* Fault Simulation Switch for testing Error & Retry */}
-          <label
-            className="flex items-center gap-2 px-2.5 py-1.5 rounded-DEFAULT bg-surface-container border border-outline-variant/25 cursor-pointer select-none"
-            title="Simulate a transient SCADA/OPC-UA network timeout to verify non-destructive error handling and retry"
-          >
-            <input
-              type="checkbox"
-              checked={simulateFault}
-              onChange={(e) => setSimulateFault(e.target.checked)}
-              className="accent-error rounded-xs cursor-pointer"
-            />
-            <span className="font-mono text-[11px] text-on-surface-variant">
-              Simulate Gateway Fault
-            </span>
-          </label>
-
-          <button
-            type="button"
-            onClick={() => setStage('empty')}
-            className="px-3 py-1.5 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high border border-outline-variant/25 font-body-sm text-xs text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer whitespace-nowrap"
-            title="Clear current analysis results to inspect the workspace empty state"
-          >
-            Clear Results
-          </button>
-
           <button
             type="button"
             onClick={() => runExecution(false)}
