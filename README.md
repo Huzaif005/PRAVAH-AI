@@ -1,4 +1,4 @@
-# GridMind AI (PRAVAAH) — Smart Energy Microgrid & Demand Forecasting Engine
+# PRAVAAH — Smart Energy Microgrid & Demand Forecasting Engine
 > **HackSphere 3.0 Official Submission** · Powered by **Zoho Catalyst** & **Zoho Catalyst QuickML**
 
 ---
