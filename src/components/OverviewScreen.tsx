@@ -486,7 +486,7 @@ export const OverviewScreen: React.FC<OverviewScreenProps> = ({
             onClick={() => onNavigate('history')}
             className="text-xs font-medium text-[#754536] hover:underline cursor-pointer self-start sm:self-auto"
           >
-            View all in History (/app/history) →
+            View all in History →
           </button>
         </div>
 

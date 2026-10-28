@@ -709,7 +709,7 @@ export const OnboardingScreen: React.FC<OnboardingScreenProps> = ({
       </main>
 
       <footer className="border-t border-[#DDD5C9] py-5 text-center font-mono-meta text-[11px] text-[#716A61]">
-        STEP {step} OF 3 · PARAMETERS CAN BE MODIFIED ANYTIME IN /APP/SETTINGS
+        STEP {step} OF 3 · PARAMETERS CAN BE MODIFIED ANYTIME IN SETTINGS
       </footer>
     </div>
   );

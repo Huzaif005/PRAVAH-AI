@@ -18,18 +18,18 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { id: 'overview', label: 'Overview', routeHint: '/app', group: 'core' },
-  { id: 'workspace', label: 'AI workspace', routeHint: '/app/workspace', group: 'core' },
-  { id: 'results', label: 'Editorial report', routeHint: '/app/results/:id', group: 'core' },
-  { id: 'history', label: 'Analysis history', routeHint: '/app/history', group: 'core' },
-  { id: 'settings', label: 'Settings', routeHint: '/app/settings', group: 'core' },
+  { id: 'overview', label: 'Overview', routeHint: 'overview', group: 'core' },
+  { id: 'workspace', label: 'AI workspace', routeHint: 'workspace', group: 'core' },
+  { id: 'results', label: 'Editorial report', routeHint: 'results', group: 'core' },
+  { id: 'history', label: 'Analysis history', routeHint: 'history', group: 'core' },
+  { id: 'settings', label: 'Settings', routeHint: 'settings', group: 'core' },
 
-  { id: 'microgrid-simulator', label: 'Stress simulator', routeHint: '/app/simulator', group: 'tools' },
-  { id: 'decision-lab', label: 'Policy matrix', routeHint: '/app/matrix', group: 'tools' },
-  { id: 'demand-forecast', label: '24h load horizon', routeHint: '/app/forecast', group: 'tools' },
+  { id: 'microgrid-simulator', label: 'Stress simulator', routeHint: 'simulator', group: 'tools' },
+  { id: 'decision-lab', label: 'Policy matrix', routeHint: 'matrix', group: 'tools' },
+  { id: 'demand-forecast', label: '24h load horizon', routeHint: 'forecast', group: 'tools' },
 
-  { id: 'onboarding', label: 'Onboarding steps', routeHint: '/onboarding', group: 'account' },
-  { id: 'login', label: 'Sign in / Sign up', routeHint: '/login', group: 'account' },
+  { id: 'onboarding', label: 'Onboarding steps', routeHint: 'onboarding', group: 'account' },
+  { id: 'login', label: 'Sign in or Sign up', routeHint: 'login', group: 'account' },
 ];
 
 export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
@@ -78,7 +78,7 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
               className="font-mono-meta text-[11px] text-[#716A61] hover:text-[#29251F] cursor-pointer"
               title="Return to public landing page"
             >
-              / Home
+              Home
             </button>
           </div>
 
@@ -116,9 +116,6 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
                       }`}
                     >
                       <span>{item.label}</span>
-                      <span className="font-mono-meta text-[10px] text-[#716A61]">
-                        {item.routeHint}
-                      </span>
                     </button>
                   );
                 })}
@@ -172,9 +169,6 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
                       }`}
                     >
                       <span>{item.label}</span>
-                      <span className="font-mono-meta text-[10px] text-[#716A61]">
-                        {item.routeHint}
-                      </span>
                     </button>
                   );
                 })}
@@ -225,13 +219,7 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
             </button>
 
             <div className="flex items-center gap-2 truncate">
-              <span className="font-mono-meta text-xs text-[#754536] font-medium">
-                {currentNav.routeHint === '/app/results/:id'
-                  ? `/app/results/${activeReportId}`
-                  : currentNav.routeHint}
-              </span>
-              <span className="text-[#DDD5C9]">·</span>
-              <span className="text-sm font-medium text-[#29251F] truncate">
+              <span className="text-base font-semibold text-[#29251F] truncate">
                 {currentNav.label}
               </span>
             </div>
@@ -291,9 +279,6 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
                     }`}
                   >
                     <span>{item.label}</span>
-                    <span className="font-mono-meta text-[11px] text-[#716A61]">
-                      {item.routeHint}
-                    </span>
                   </button>
                 );
               })}

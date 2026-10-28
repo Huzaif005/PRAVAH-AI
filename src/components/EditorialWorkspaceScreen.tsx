@@ -221,7 +221,7 @@ export const EditorialWorkspaceScreen: React.FC<EditorialWorkspaceScreenProps> =
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-[#DDD5C9]">
         <div>
           <span className="font-mono-meta text-[11px] uppercase tracking-[0.14em] text-[#754536] block mb-1">
-            /APP/WORKSPACE · CORE ANALYSIS WORKFLOW
+            WORKSPACE · CORE ANALYSIS WORKFLOW
           </span>
           <h1 className="font-serif-editorial text-[32px] sm:text-[40px] leading-[1.12] text-[#29251F]">
             Feeder dispatch &amp; peak mitigation workspace

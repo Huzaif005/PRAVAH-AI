@@ -105,7 +105,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
     if (onRecordDecision) {
       onRecordDecision({
         id: `CFG-${Math.floor(1000 + Math.random() * 9000)}`,
-        workspace: 'Workspace Settings (/app/settings)',
+        workspace: 'Workspace Settings',
         screenId: 'settings',
         decision: 'APPROVED',
         scheduleWindow: 'Immediate Workspace Policy',
